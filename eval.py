@@ -12,19 +12,18 @@ from nltk.translate.bleu_score import sentence_bleu, SmoothingFunction
 from rouge_score import rouge_scorer
 import pandas as pd
 
-
 class VQAEvaluationMetrics:
     def __init__(self):
         self.rouge_scorer = rouge_scorer.RougeScorer(['rouge1', 'rouge2', 'rougeL'], use_stemmer=True)
         self.smoothing_function = SmoothingFunction().method1
-        
+
     def normalize_answer(self, text: str) -> str:
-        """VQA 용 전처리"""
         if not text or not isinstance(text, str):
             return ""
 
         text = text.lower()
         text = text.translate(str.maketrans('', '', string.punctuation))
+ 
         text = re.sub(r'\s+', ' ', text).strip()
         words = text.split()
         words = [w for w in words if w not in ['the', 'a', 'an', 'and', 'or', 'but']]
@@ -32,6 +31,7 @@ class VQAEvaluationMetrics:
         return ' '.join(words)
     
     def exact_match_score(self, prediction: str, ground_truth: str) -> float:
+        """정확한 매칭 점수"""
         return 1.0 if self.normalize_answer(prediction) == self.normalize_answer(ground_truth) else 0.0
     
     def vqa_accuracy_score(self, prediction: str, ground_truths: List[str]) -> float:
@@ -45,7 +45,7 @@ class VQAEvaluationMetrics:
         for gt in ground_truths:
             if self.normalize_answer(gt) == pred_norm:
                 matches += 1
-
+        
         if len(ground_truths) >= 3:
             return min(matches / 3.0, 1.0)
         else:
@@ -74,7 +74,6 @@ class VQAEvaluationMetrics:
         return precision, recall, f1
     
     def bleu_score(self, prediction: str, ground_truths: List[str]) -> float:
-        """BLEU 스코어"""
         pred_tokens = self.normalize_answer(prediction).split()
         reference_tokens = [self.normalize_answer(gt).split() for gt in ground_truths if gt]
         
@@ -92,7 +91,6 @@ class VQAEvaluationMetrics:
             return 0.0
     
     def rouge_scores(self, prediction: str, ground_truth: str) -> Dict[str, float]:
-        """ROUGE 스코어"""
         try:
             scores = self.rouge_scorer.score(ground_truth, prediction)
             return {
@@ -104,7 +102,7 @@ class VQAEvaluationMetrics:
             return {'rouge1': 0.0, 'rouge2': 0.0, 'rougeL': 0.0}
     
     def semantic_similarity_score(self, prediction: str, ground_truth: str) -> float:
-        """의미적 유사도 점수 (단순 토큰 overlap)"""
+        """의미적 유사도 점수 (단순 토큰 겹침 기반)"""
         pred_tokens = set(self.normalize_answer(prediction).split())
         gt_tokens = set(self.normalize_answer(ground_truth).split())
         
@@ -130,7 +128,6 @@ class VQAEvaluationMetrics:
         return min(pred_len, gt_len) / max(pred_len, gt_len)
     
     def evaluate_single_sample(self, prediction: str, ground_truths: List[str]) -> Dict[str, Any]:
-        """단일 샘플에 대한 종합 평가"""
         if isinstance(ground_truths, str):
             ground_truths = [ground_truths]
         
@@ -147,10 +144,9 @@ class VQAEvaluationMetrics:
         semantic_sim = self.semantic_similarity_score(prediction, primary_gt)
         length_ratio = self.answer_length_ratio(prediction, primary_gt)
         
+        best_scores = {}
         if len(ground_truths) > 1:
             best_scores = self._get_best_scores_across_gts(prediction, ground_truths)
-        else:
-            best_scores = {}
         
         metrics = {
             'exact_match': exact_match,
@@ -168,7 +164,8 @@ class VQAEvaluationMetrics:
             'gt_length': len(primary_gt.split()),
             'num_ground_truths': len(ground_truths)
         }
-
+        
+        # 최고 점수 추가
         metrics.update(best_scores)
         
         return metrics
@@ -217,30 +214,37 @@ class VQAEvaluationMetrics:
         }
 
 
-class VQAResultsEvaluator:   
+class VQAResultsEvaluator:
     def __init__(self):
         self.metrics_calculator = VQAEvaluationMetrics()
     
-    def load_results(self, results_file: str) -> List[Dict]:
+    def load_results(self, results_file: str) -> Tuple[List[Dict], Dict]:
+        """VQA 결과 파일 로드"""
         try:
             with open(results_file, 'r', encoding='utf-8') as f:
                 data = json.load(f)
+            
+            model_info = {}
+            results = []
 
             if isinstance(data, dict) and 'results' in data:
                 results = data['results']
-                print(f"Loaded {len(results)} results from structured file")
+                model_info = data.get('model_info', {})
+                print(f"Loaded {len(results)} results from evaluator structured file")
+                if model_info:
+                    print(f"Model: {model_info.get('model_type', 'Unknown')}")
             elif isinstance(data, list):
                 results = data
-                print(f"Loaded {len(results)} results from list file")
+                print(f"Loaded {len(results)} results from legacy list file")
             else:
                 print("Error: Unsupported file format")
-                return []
+                return [], {}
             
-            return results
+            return results, model_info
             
         except Exception as e:
             print(f"Error loading results file: {e}")
-            return []
+            return [], {}
     
     def extract_predictions_and_ground_truths(self, results: List[Dict]) -> Tuple[List[str], List[List[str]]]:
         """결과에서 예측값과 정답 추출"""
@@ -273,14 +277,21 @@ class VQAResultsEvaluator:
     
     def evaluate_results(self, results_file: str, output_file: str = None, 
                         detailed_output: bool = True) -> Dict[str, Any]:
+        print(f"Loading VQA results from {results_file}...")
+        results, model_info = self.load_results(results_file)
         
-        print(f"Loading results from {results_file}...")
-        results = self.load_results(results_file)
+        if not results:
+            print("No results to evaluate")
+            return {}
         
         print(f"Extracting predictions and ground truths...")
         predictions, ground_truths = self.extract_predictions_and_ground_truths(results)
         
-        print(f"Evaluating {len(predictions)} predictions...")
+        if not predictions:
+            print("No successful predictions found")
+            return {}
+        
+        print(f"Evaluating {len(predictions)} VQA predictions...")
 
         sample_metrics = []
         for i, (pred, gts) in enumerate(zip(predictions, ground_truths)):
@@ -296,6 +307,7 @@ class VQAResultsEvaluator:
         overall_stats = self._calculate_overall_statistics(sample_metrics)
 
         evaluation_results = {
+            'model_info': model_info,
             'evaluation_summary': overall_stats,
             'sample_count': len(sample_metrics),
             'successful_samples': len([r for r in results if r.get('success', False)]),
@@ -304,18 +316,16 @@ class VQAResultsEvaluator:
         
         if detailed_output:
             evaluation_results['detailed_metrics'] = sample_metrics
-        
-        # 결과 저장
+
         if output_file:
             self._save_evaluation_results(evaluation_results, output_file)
             print(f"Evaluation results saved to {output_file}")
 
-        self._print_evaluation_summary(overall_stats)
+        self._print_evaluation_summary(overall_stats, model_info)
         
         return evaluation_results
     
     def _calculate_overall_statistics(self, sample_metrics: List[Dict]) -> Dict[str, Any]:
-        """전체 통계"""
         if not sample_metrics:
             return {}
 
@@ -337,7 +347,7 @@ class VQAResultsEvaluator:
                 stats[f'std_{key}'] = np.std(values)
                 stats[f'min_{key}'] = np.min(values)
                 stats[f'max_{key}'] = np.max(values)
- 
+
         for key in best_metric_keys:
             values = [m[key] for m in sample_metrics if key in m]
             if values:
@@ -359,61 +369,58 @@ class VQAResultsEvaluator:
         return stats
     
     def _save_evaluation_results(self, results: Dict, output_file: str):
-        """평가 결과 저장"""
         try:
             with open(output_file, 'w', encoding='utf-8') as f:
                 json.dump(results, f, ensure_ascii=False, indent=2)
         except Exception as e:
             print(f"Error saving evaluation results: {e}")
     
-    def _print_evaluation_summary(self, stats: Dict):
-        """평가 요약 출력"""
+    def _print_evaluation_summary(self, stats: Dict, model_info: Dict):
         print("\n" + "="*60)
         print("                    EVALUATION SUMMARY")
         print("="*60)
         
-        # 메트릭
-        print(f"Primary Metrics:")
-        print(f" -Exact Match:      {stats.get('avg_exact_match', 0):.4f} ± {stats.get('std_exact_match', 0):.4f}")
-        print(f" -VQA Accuracy:     {stats.get('avg_vqa_accuracy', 0):.4f} ± {stats.get('std_vqa_accuracy', 0):.4f}")
-        print(f" -Token F1:         {stats.get('avg_token_f1', 0):.4f} ± {stats.get('std_token_f1', 0):.4f}")
-        print(f" -BLEU Score:       {stats.get('avg_bleu_score', 0):.4f} ± {stats.get('std_bleu_score', 0):.4f}")
-        print(f" -ROUGE-L:          {stats.get('avg_rougeL', 0):.4f} ± {stats.get('std_rougeL', 0):.4f}")
-        
-        # 분포
-        print(f"Performance Distribution:")
-        print(f" -Exact Matches:    {stats.get('exact_match_count', 0)} ({stats.get('exact_match_percentage', 0):.1f}%)")
-        print(f" -High F1 (≥0.8):   {stats.get('high_f1_count', 0)}")
-        print(f" -Medium F1 (0.5-0.8): {stats.get('medium_f1_count', 0)}")
-        print(f" -Low F1 (<0.5):    {stats.get('low_f1_count', 0)}")
-        
-        # 답변 길이
-        print(f"Answer Length Statistics:")
-        print(f" -Avg Prediction:   {stats.get('avg_prediction_length', 0):.1f} tokens")
-        print(f" -Avg Ground Truth: {stats.get('avg_gt_length', 0):.1f} tokens")
-        print(f" -Avg GT Count:     {stats.get('avg_num_ground_truths', 0):.1f}")
-        
+        # 모델 정보
+        if model_info:
+            print(f"Model Information:")
+            print(f"   Model Type: {model_info.get('model_type', 'Unknown')}")
+            if 'architecture' in model_info:
+                print(f"   Architecture: {model_info.get('architecture', 'Unknown')}")
+            if 'model_path' in model_info:
+                print(f"   Model Path: {model_info.get('model_path', 'Unknown')}")
+
+        print(f"\nPrimary Metrics:")
+        print(f"   Exact Match:      {stats.get('avg_exact_match', 0):.4f} ± {stats.get('std_exact_match', 0):.4f}")
+        print(f"   VQA Accuracy:     {stats.get('avg_vqa_accuracy', 0):.4f} ± {stats.get('std_vqa_accuracy', 0):.4f}")
+        print(f"   Token F1:         {stats.get('avg_token_f1', 0):.4f} ± {stats.get('std_token_f1', 0):.4f}")
+        print(f"   BLEU Score:       {stats.get('avg_bleu_score', 0):.4f} ± {stats.get('std_bleu_score', 0):.4f}")
+        print(f"   ROUGE-L:          {stats.get('avg_rougeL', 0):.4f} ± {stats.get('std_rougeL', 0):.4f}")
+
+        print(f"\nPerformance Distribution:")
+        print(f"   Exact Matches:    {stats.get('exact_match_count', 0)} ({stats.get('exact_match_percentage', 0):.1f}%)")
+        print(f"   High F1 (≥0.8):   {stats.get('high_f1_count', 0)}")
+        print(f"   Medium F1 (0.5-0.8): {stats.get('medium_f1_count', 0)}")
+        print(f"   Low F1 (<0.5):    {stats.get('low_f1_count', 0)}")
+ 
+        print(f"\nAnswer Length Statistics:")
+        print(f"   Avg Prediction:   {stats.get('avg_prediction_length', 0):.1f} tokens")
+        print(f"   Avg Ground Truth: {stats.get('avg_gt_length', 0):.1f} tokens")
+        print(f"   Avg GT Count:     {stats.get('avg_num_ground_truths', 0):.1f}")
+
         if 'avg_best_exact_match' in stats:
-            print(f"Best Scores (Multi-GT):")
-            print(f" -Best Exact Match: {stats.get('avg_best_exact_match', 0):.4f}")
-            print(f" -Best Token F1:    {stats.get('avg_best_token_f1', 0):.4f}")
+            print(f"\nBest Scores (Multi-GT):")
+            print(f"   Best Exact Match: {stats.get('avg_best_exact_match', 0):.4f}")
+            print(f"   Best Token F1:    {stats.get('avg_best_token_f1', 0):.4f}")
         
         print("="*60)
     
     def export_to_csv(self, evaluation_results: Dict, csv_file: str):
-        if 'detailed_metrics' not in evaluation_results:
-            print("No detailed metrics available for CSV export")
-            return
-        
-        try:
-            df = pd.DataFrame(evaluation_results['detailed_metrics'])
-            df.to_csv(csv_file, index=False, encoding='utf-8')
-            print(f"Detailed metrics exported to {csv_file}")
-        except Exception as e:
-            print(f"Error exporting to CSV: {e}")
+        df = pd.DataFrame(evaluation_results['detailed_metrics'])
+        df.to_csv(csv_file, index=False, encoding='utf-8')
+        print(f"Detailed metrics exported to {csv_file}")
     
     def compare_results(self, results_file1: str, results_file2: str, output_file: str = None):
-        """두 VQA 결과 비교"""
+        print("Comparing two VQA results...")
         
         eval1 = self.evaluate_results(results_file1, detailed_output=False)
         eval2 = self.evaluate_results(results_file2, detailed_output=False)
@@ -423,6 +430,8 @@ class VQAResultsEvaluator:
             return
         
         comparison = {
+            'model1_info': eval1.get('model_info', {}),
+            'model2_info': eval2.get('model_info', {}),
             'model1_summary': eval1['evaluation_summary'],
             'model2_summary': eval2['evaluation_summary'],
             'improvement': {},
@@ -431,7 +440,7 @@ class VQAResultsEvaluator:
                 'model2': eval2['sample_count']
             }
         }
-
+ 
         stats1 = eval1['evaluation_summary']
         stats2 = eval2['evaluation_summary']
         
@@ -445,11 +454,21 @@ class VQAResultsEvaluator:
         if output_file:
             with open(output_file, 'w', encoding='utf-8') as f:
                 json.dump(comparison, f, ensure_ascii=False, indent=2)
+
+        print(f"\n{'='*50}")
+        print("        MODEL COMPARISON RESULTS")
+        print(f"{'='*50}")
+
+        model1_info = comparison['model1_info']
+        model2_info = comparison['model2_info']
+        print(f"Model 1: {model1_info.get('model_type', 'Unknown')} ({model1_info.get('architecture', 'Unknown')})")
+        print(f"Model 2: {model2_info.get('model_type', 'Unknown')} ({model2_info.get('architecture', 'Unknown')})")
         
+        print(f"\nPerformance Comparison:")
         for metric in key_metrics:
             if metric in comparison['improvement']:
                 improvement = comparison['improvement'][metric]
-                direction = "📈" if improvement > 0 else "📉" if improvement < 0 else "➡️"
+                direction = "Improved" if improvement > 0 else "Not improved" if improvement < 0 else "➡️"
                 print(f"{metric:20s}: {improvement:+.4f} {direction}")
         
         return comparison
@@ -495,7 +514,7 @@ def main():
         if args.csv_export and detailed_output:
             evaluator.export_to_csv(evaluation_results, args.csv_export)
     
-    print("\nEvaluation completed")
+    print("\nEvaluation completed successfully!")
 
 if __name__ == "__main__":
     main()
