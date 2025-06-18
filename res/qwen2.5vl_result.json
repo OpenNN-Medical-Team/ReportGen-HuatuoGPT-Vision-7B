@@ -1,0 +1,1832 @@
+{
+    "model_info": {
+      "model_type": "qwen2.5vl",
+      "architecture": "Qwen2.5-VL",
+      "specialization": "Medical VQA",
+      "model_path": "/root/HuatuoGPT-Vision/HuatuoGPT-Vision-7B-Qwen2.5VL"
+    },
+    "results": [
+      {
+        "question": "Does it have brain tumor? If it have please tell us where it is located?\r\n",
+        "image_path": "temp_image.png",
+        "generated_answer": "Yes, the image shows a brain tumor. It's located in the right frontal lobe of the brain and appears to be quite large, occupying significant space within that region. The tumor has caused some distortion and displacement of nearby brain structures due to its size.",
+        "success": true,
+        "model_type": "qwen2.5vl",
+        "model_info": {
+          "model_type": "qwen2.5vl",
+          "model_path": "/root/HuatuoGPT-Vision/HuatuoGPT-Vision-7B-Qwen2.5VL"
+        },
+        "ground_truth_answer": "Yes, the image shows a brain tumor. It is a large, well-defined mass located in the right parietal lobe. The characteristics suggest a meningioma (a typically benign tumor arising from the meninges). The tumor appears as a bright, homogeneously enhancing mass with clear borders adjacent to the falx cerebri.",
+        "sample_id": 0,
+        "original_sample_fields": [
+          "Question",
+          "Answer",
+          "image"
+        ]
+      },
+      {
+        "question": "Is this a healthy brain or is there a tumor present?",
+        "image_path": "temp_image.png",
+        "generated_answer": "The image shows an abnormal mass in the right frontal lobe of the brain, which appears to be a tumor based on its characteristics and location. The presence of such a lesion typically indicates that it is not a normal part of the brain structure but rather something pathological. It's important for further evaluation by medical professionals who can provide more detailed information about the nature of the tumor and appropriate treatment options if needed.",
+        "success": true,
+        "model_type": "qwen2.5vl",
+        "model_info": {
+          "model_type": "qwen2.5vl",
+          "model_path": "/root/HuatuoGPT-Vision/HuatuoGPT-Vision-7B-Qwen2.5VL"
+        },
+        "ground_truth_answer": "There is a tumor present. This axial FLAIR MRI shows a large, hyperintense (bright) mass in the right frontal lobe with surrounding edema. ",
+        "sample_id": 1,
+        "original_sample_fields": [
+          "Question",
+          "Answer",
+          "image"
+        ]
+      },
+      {
+        "question": "Can you identify a tumor in this brain MRI?",
+        "image_path": "temp_image.png",
+        "generated_answer": "Yes, the image shows an enhancing lesion located centrally within the right frontal lobe of the brain. This lesion is characterized by its bright appearance on T2-weighted imaging and its distinct enhancement after contrast administration, which suggests it could be a type of brain tumor or other pathological growth. The surrounding brain tissue appears normal without signs of edema or significant displacement, indicating that while there's localized impact from the lesion, overall brain structure remains intact outside the immediate vicinity of the tumor.",
+        "success": true,
+        "model_type": "qwen2.5vl",
+        "model_info": {
+          "model_type": "qwen2.5vl",
+          "model_path": "/root/HuatuoGPT-Vision/HuatuoGPT-Vision-7B-Qwen2.5VL"
+        },
+        "ground_truth_answer": "This MRI scan appears to show a brain tumor. There is a well-defined hyperintense lesion with a central hypointense core in the left frontal lobe, which could indicate a contrast-enhancing mass lesion. This pattern is suggestive of a high-grade glioma (such as glioblastoma) or a metastasis.",
+        "sample_id": 2,
+        "original_sample_fields": [
+          "Question",
+          "Answer",
+          "image"
+        ]
+      },
+      {
+        "question": "Does this MRI indicate a benign or malignant tumor?",
+        "image_path": "temp_image.png",
+        "generated_answer": "The MRI image shows characteristics that suggest the presence of a potentially aggressive lesion, which could be indicative of malignancy rather than a benign condition. The irregular shape and heterogeneous enhancement pattern typically seen in such images often correlate with more aggressive tumors like glioblastoma multiforme (GBM). However, further diagnostic tests including biopsy would be necessary to confirm the nature of the tumor definitively. It's important for patients to discuss these findings thoroughly with their healthcare provider who can provide detailed insights based on comprehensive clinical evaluation.",
+        "success": true,
+        "model_type": "qwen2.5vl",
+        "model_info": {
+          "model_type": "qwen2.5vl",
+          "model_path": "/root/HuatuoGPT-Vision/HuatuoGPT-Vision-7B-Qwen2.5VL"
+        },
+        "ground_truth_answer": "This MRI indicates a malignant tumor, most likely a glioblastoma multiforme (GBM), which is an aggressive primary brain tumor.To confirm the diagnosis, further evaluation with contrast-enhanced MRI, biopsy, and clinical correlation is necessary.",
+        "sample_id": 3,
+        "original_sample_fields": [
+          "Question",
+          "Answer",
+          "image"
+        ]
+      },
+      {
+        "question": "Does this scan suggest a primary or secondary brain tumor?",
+        "image_path": "temp_image.png",
+        "generated_answer": " hyperintense lesion in the right cerebellar hemisphere, which is suggestive of a metastatic deposit rather than a primary brain tumor. The characteristics such as its location and appearance on MRI sequences typically favor a secondary (metastatic) origin over a primary brain neoplasm.\n\n### Key Points:\n1. **Location**: The lesion is located in the cerebellum.\n2. **Appearance**:\n   - Hyperintense on T1-weighted images suggests a high protein content or hemorrhagic component.\n   - Hypointense on T2-weighted images indicates lower water content compared to surrounding tissue.\n3. **Contrast",
+        "success": true,
+        "model_type": "qwen2.5vl",
+        "model_info": {
+          "model_type": "qwen2.5vl",
+          "model_path": "/root/HuatuoGPT-Vision/HuatuoGPT-Vision-7B-Qwen2.5VL"
+        },
+        "ground_truth_answer": "This MRI scan shows a well-defined, contrast-enhancing lesion with surrounding edema, suggestive of a secondary (metastatic) brain tumor rather than a primary brain tumor.A contrast-enhanced MRI, along with a clinical history of systemic cancer, would help differentiate between a primary and secondary brain tumor.",
+        "sample_id": 4,
+        "original_sample_fields": [
+          "Question",
+          "Answer",
+          "image"
+        ]
+      },
+      {
+        "question": "Is the brain healthy in this MRI or it is having some tumor?",
+        "image_path": "temp_image.png",
+        "generated_answer": "",
+        "success": true,
+        "model_type": "qwen2.5vl",
+        "model_info": {
+          "model_type": "qwen2.5vl",
+          "model_path": "/root/HuatuoGPT-Vision/HuatuoGPT-Vision-7B-Qwen2.5VL"
+        },
+        "ground_truth_answer": "This MRI shows an abnormal mass in the left frontal lobe, which appears as a contrast-enhancing lesion with surrounding edema. The presence of this lesion suggests a brain tumor.The brain is not healthy, as the tumor may cause mass effect, neurological deficits, and other complications.",
+        "sample_id": 5,
+        "original_sample_fields": [
+          "Question",
+          "Answer",
+          "image"
+        ]
+      },
+      {
+        "question": "Does this scan show a contrast-enhancing brain lesion?",
+        "image_path": "temp_image.png",
+        "generated_answer": "",
+        "success": true,
+        "model_type": "qwen2.5vl",
+        "model_info": {
+          "model_type": "qwen2.5vl",
+          "model_path": "/root/HuatuoGPT-Vision/HuatuoGPT-Vision-7B-Qwen2.5VL"
+        },
+        "ground_truth_answer": "Yes, this MRI scan shows a contrast-enhancing brain lesion in the right frontal lobe. The hyperintense area with well-defined borders suggests abnormal contrast uptake, which is commonly seen in high-grade gliomas (such as glioblastoma multiforme - GBM) or metastatic brain tumors.",
+        "sample_id": 6,
+        "original_sample_fields": [
+          "Question",
+          "Answer",
+          "image"
+        ]
+      },
+      {
+        "question": "Can you determine the location of the brain tumor?",
+        "image_path": "temp_image.png",
+        "generated_answer": "The brain MRI scan shows an enhancing mass located in the right basal ganglia region, which is consistent with the provided reference information indicating that the lesion was found to be arising from this area upon further evaluation. The precise anatomical details and extent of the tumor can be better appreciated by examining the full set of imaging studies and consulting with a qualified medical professional for a comprehensive assessment and diagnosis.",
+        "success": true,
+        "model_type": "qwen2.5vl",
+        "model_info": {
+          "model_type": "qwen2.5vl",
+          "model_path": "/root/HuatuoGPT-Vision/HuatuoGPT-Vision-7B-Qwen2.5VL"
+        },
+        "ground_truth_answer": "Yes, this MRI scan shows a contrast-enhancing lesion located in the parietal lobe, slightly towards the midline.The location in the parietal region may result in symptoms such as sensory disturbances, spatial disorientation, or motor deficits if the tumor affects adjacent structures.",
+        "sample_id": 7,
+        "original_sample_fields": [
+          "Question",
+          "Answer",
+          "image"
+        ]
+      },
+      {
+        "question": "Is there any sign of necrosis within the tumor?",
+        "image_path": "temp_image.png",
+        "generated_answer": "Yes, the image shows areas of necrosis or tissue death within the tumor mass in the right frontal lobe region.",
+        "success": true,
+        "model_type": "qwen2.5vl",
+        "model_info": {
+          "model_type": "qwen2.5vl",
+          "model_path": "/root/HuatuoGPT-Vision/HuatuoGPT-Vision-7B-Qwen2.5VL"
+        },
+        "ground_truth_answer": "Yes, this MRI scan shows signs of necrosis within the tumor. The lesion exhibits a ring-enhancing appearance with a central hypointense (dark) core, which is characteristic of tumor necrosis",
+        "sample_id": 8,
+        "original_sample_fields": [
+          "Question",
+          "Answer",
+          "image"
+        ]
+      },
+      {
+        "question": "Does this scan suggest a primary or secondary brain tumor?",
+        "image_path": "temp_image.png",
+        "generated_answer": "The MRI image shows an enhancing mass in the right frontal lobe, which is suggestive of a primary brain tumor rather than a metastatic lesion (secondary brain tumor). The characteristics such as its location and enhancement pattern typically indicate a primary neoplastic process within the brain tissue itself.\n\nTo further confirm whether it's a primary or secondary brain tumor:\n1. **Location**: Primary tumors often arise from specific regions like the frontal lobes.\n2. **Enhancement Pattern**: The intense contrast enhancement suggests active blood-brain barrier disruption typical for primary tumors but less so with metastases.\n3. **Symptoms**: Clinical symptoms can help differentiate between",
+        "success": true,
+        "model_type": "qwen2.5vl",
+        "model_info": {
+          "model_type": "qwen2.5vl",
+          "model_path": "/root/HuatuoGPT-Vision/HuatuoGPT-Vision-7B-Qwen2.5VL"
+        },
+        "ground_truth_answer": "This MRI scan shows a contrast-enhancing lesion with surrounding vasogenic edema, suggesting an aggressive tumor.Further clinical correlation, systemic imaging, and possibly a biopsy are needed for definitive differentiation between primary and secondary tumors.",
+        "sample_id": 9,
+        "original_sample_fields": [
+          "Question",
+          "Answer",
+          "image"
+        ]
+      },
+      {
+        "question": "Tell me the condition of the brain. Healthy or having a tumor?",
+        "image_path": "temp_image.png",
+        "generated_answer": "The image shows an axial view of a brain MRI with contrast enhancement, which is typically used to highlight abnormalities in soft tissues like tumors. The scan reveals a distinct area of abnormality on the left side of the brain, characterized by irregular borders and increased signal intensity compared to surrounding tissue. This could indicate the presence of a lesion such as a tumor. However, without additional clinical information and further diagnostic tests, it's not possible to definitively diagnose whether this represents a benign or malignant growth. A detailed evaluation by a radiologist would be necessary for accurate interpretation and diagnosis.",
+        "success": true,
+        "model_type": "qwen2.5vl",
+        "model_info": {
+          "model_type": "qwen2.5vl",
+          "model_path": "/root/HuatuoGPT-Vision/HuatuoGPT-Vision-7B-Qwen2.5VL"
+        },
+        "ground_truth_answer": "This MRI scan reveals a contrast-enhancing lesion in the brain, suggesting the presence of a tumor. The lesion appears well-defined and located near the brain's surface, possibly indicative of a metastatic tumor or a meningioma.",
+        "sample_id": 10,
+        "original_sample_fields": [
+          "Question",
+          "Answer",
+          "image"
+        ]
+      },
+      {
+        "question": "Does this MRI show signs of a glioblastoma?",
+        "image_path": "temp_image.png",
+        "generated_answer": "The image does not definitively confirm the presence of a glioblastoma, but it shows characteristics suggestive of such pathology. The large mass with irregular borders and heterogeneous enhancement is typical for high-grade tumors like glioblastomas. However, further diagnostic workup including histopathological examination would be necessary to conclusively diagnose glioblastoma.",
+        "success": true,
+        "model_type": "qwen2.5vl",
+        "model_info": {
+          "model_type": "qwen2.5vl",
+          "model_path": "/root/HuatuoGPT-Vision/HuatuoGPT-Vision-7B-Qwen2.5VL"
+        },
+        "ground_truth_answer": "This MRI scan exhibits features that are suggestive of glioblastoma multiforme (GBM). The lesion appears large, irregular, and heterogeneous.",
+        "sample_id": 11,
+        "original_sample_fields": [
+          "Question",
+          "Answer",
+          "image"
+        ]
+      },
+      {
+        "question": "Is the tumor located in the frontal lobe?",
+        "image_path": "temp_image.png",
+        "generated_answer": "No, based on the information provided and the appearance of the image, the tumor is not located in the frontal lobe but rather appears to be situated more centrally within the brain structure. The reference indicates that the tumor was initially diagnosed as being in the right frontal lobe, but further examination revealed it to be located at the base of the skull, specifically in the clivus region.",
+        "success": true,
+        "model_type": "qwen2.5vl",
+        "model_info": {
+          "model_type": "qwen2.5vl",
+          "model_path": "/root/HuatuoGPT-Vision/HuatuoGPT-Vision-7B-Qwen2.5VL"
+        },
+        "ground_truth_answer": "Yes, the tumor appears to be located in the frontal lobe. The MRI scan shows an irregular, contrast-enhancing mass with necrotic regions in the frontal region of the brain.However, further clinical correlation and radiological assessment are necessary for a definitive diagnosis.",
+        "sample_id": 12,
+        "original_sample_fields": [
+          "Question",
+          "Answer",
+          "image"
+        ]
+      },
+      {
+        "question": "Does this MRI scan indicate the presence of a brain tumor?",
+        "image_path": "temp_image.png",
+        "generated_answer": "Yes, based on the image analysis and the reference information provided, it appears that there is an abnormal mass or lesion visible in the right frontal lobe region of the brain. The irregular shape, contrast enhancement, and surrounding edema suggest the possibility of a brain tumor or other pathological process affecting this area of the brain. Further clinical evaluation and diagnostic tests would be necessary to determine the exact nature and extent of the underlying condition.",
+        "success": true,
+        "model_type": "qwen2.5vl",
+        "model_info": {
+          "model_type": "qwen2.5vl",
+          "model_path": "/root/HuatuoGPT-Vision/HuatuoGPT-Vision-7B-Qwen2.5VL"
+        },
+        "ground_truth_answer": "Yes, this MRI scan indicates the presence of a brain tumor. The image shows a contrast-enhancing lesion with irregular borders and central necrosis, which are characteristic features of a malignant brain tumor",
+        "sample_id": 13,
+        "original_sample_fields": [
+          "Question",
+          "Answer",
+          "image"
+        ]
+      },
+      {
+        "question": "Can you identify a tumor in this brain MRI? If yes tell me the location",
+        "image_path": "temp_image.png",
+        "generated_answer": "Yes, there is an abnormal mass visible on the left side of the brain in this MRI scan. The mass appears to be located within the cerebral hemisphere and has irregular borders with surrounding edema or swelling. This finding suggests the presence of a potential pathological process such as a tumor, lesion, or other abnormality that requires further clinical evaluation and investigation by medical professionals.",
+        "success": true,
+        "model_type": "qwen2.5vl",
+        "model_info": {
+          "model_type": "qwen2.5vl",
+          "model_path": "/root/HuatuoGPT-Vision/HuatuoGPT-Vision-7B-Qwen2.5VL"
+        },
+        "ground_truth_answer": "Yes, this MRI scan shows a brain tumor. The tumor appears to be located in the frontal lobe, extending towards the midline, possibly affecting the corpus callosum and periventricular regions.",
+        "sample_id": 14,
+        "original_sample_fields": [
+          "Question",
+          "Answer",
+          "image"
+        ]
+      },
+      {
+        "question": "Is there any contrast enhancement in the lesion?",
+        "image_path": "temp_image.png",
+        "generated_answer": "Yes, the image shows significant heterogeneous and intense peripheral gadolinium enhancement of the lesion, indicating active inflammation or breakdown of the blood-brain barrier around the tumor.",
+        "success": true,
+        "model_type": "qwen2.5vl",
+        "model_info": {
+          "model_type": "qwen2.5vl",
+          "model_path": "/root/HuatuoGPT-Vision/HuatuoGPT-Vision-7B-Qwen2.5VL"
+        },
+        "ground_truth_answer": "Yes, this MRI scan shows contrast enhancement in the lesion. The bright, irregularly shaped area suggests a contrast-enhancing tumor, which is a characteristic feature of high-grade gliomas",
+        "sample_id": 15,
+        "original_sample_fields": [
+          "Question",
+          "Answer",
+          "image"
+        ]
+      },
+      {
+        "question": "Is this a healthy brain or is there a tumor present?",
+        "image_path": "temp_image.png",
+        "generated_answer": "This MRI scan shows the presence of a tumor in the right frontal lobe, as indicated by the bright area with irregular borders and surrounding edema (swelling). This suggests that it is not a healthy brain but rather one affected by a pathological condition such as a brain tumor. Further evaluation would be necessary to determine the specific type and extent of the tumor, as well as appropriate treatment options.",
+        "success": true,
+        "model_type": "qwen2.5vl",
+        "model_info": {
+          "model_type": "qwen2.5vl",
+          "model_path": "/root/HuatuoGPT-Vision/HuatuoGPT-Vision-7B-Qwen2.5VL"
+        },
+        "ground_truth_answer": "This MRI scan shows the presence of a brain tumor. The image reveals a well-defined, contrast-enhancing lesion with irregular borders in the right hemisphere.This is not a healthy brain, and further medical evaluation, including clinical correlation and additional imaging, is necessary for diagnosis and treatment planning.",
+        "sample_id": 16,
+        "original_sample_fields": [
+          "Question",
+          "Answer",
+          "image"
+        ]
+      },
+      {
+        "question": "Does the tumor show well-defined borders?",
+        "image_path": "temp_image.png",
+        "generated_answer": "Yes, the tumor appears to have relatively well-defined and irregular borders in this MRI image.",
+        "success": true,
+        "model_type": "qwen2.5vl",
+        "model_info": {
+          "model_type": "qwen2.5vl",
+          "model_path": "/root/HuatuoGPT-Vision/HuatuoGPT-Vision-7B-Qwen2.5VL"
+        },
+        "ground_truth_answer": "Yes, the tumor in this MRI scan appears to have well-defined borders. The lesion shows a strong contrast enhancement, indicating a distinct separation between the tumor and the surrounding brain tissue.",
+        "sample_id": 17,
+        "original_sample_fields": [
+          "Question",
+          "Answer",
+          "image"
+        ]
+      },
+      {
+        "question": "Does this scan suggest a benign tumor?",
+        "image_path": "temp_image.png",
+        "generated_answer": "",
+        "success": true,
+        "model_type": "qwen2.5vl",
+        "model_info": {
+          "model_type": "qwen2.5vl",
+          "model_path": "/root/HuatuoGPT-Vision/HuatuoGPT-Vision-7B-Qwen2.5VL"
+        },
+        "ground_truth_answer": "This MRI scan shows a contrast-enhancing mass with surrounding edema, which suggests an aggressive lesion rather than a benign tumor.",
+        "sample_id": 18,
+        "original_sample_fields": [
+          "Question",
+          "Answer",
+          "image"
+        ]
+      },
+      {
+        "question": "Does it have brain tumor? If it have please tell us where it is located?",
+        "image_path": "temp_image.png",
+        "generated_answer": "The image you provided appears to be an MRI scan of the brain, but I cannot definitively identify any specific abnormalities or lesions such as tumors based on this single image alone without additional clinical context and expertise in radiology interpretation. To accurately assess for potential brain pathologies like tumors, multiple imaging sequences and views would typically need to be reviewed by a qualified medical professional who can integrate these findings with other diagnostic information. My role here is to provide general educational information about what we see in typical MRI scans, rather than making definitive diagnoses. For a comprehensive evaluation and diagnosis regarding your specific case, I strongly recommend consulting directly with your healthcare provider or a",
+        "success": true,
+        "model_type": "qwen2.5vl",
+        "model_info": {
+          "model_type": "qwen2.5vl",
+          "model_path": "/root/HuatuoGPT-Vision/HuatuoGPT-Vision-7B-Qwen2.5VL"
+        },
+        "ground_truth_answer": "This MRI scan appears to show a hyperintense lesion on T2-weighted imaging, which may suggest the presence of a brain tumor. The abnormality seems to be located near the central region, possibly affecting the basal ganglia or deep white matter structures.",
+        "sample_id": 19,
+        "original_sample_fields": [
+          "Question",
+          "Answer",
+          "image"
+        ]
+      },
+      {
+        "question": "Is there any abnormal mass present in this MRI?",
+        "image_path": "temp_image.png",
+        "generated_answer": "Yes, the image shows an abnormal mass or lesion within the brain tissue. The mass appears to be located near the center of the brain and has distinct borders compared to the surrounding normal brain structures. This finding is consistent with the reference information provided, which indicates that the MRI scan revealed an abnormal mass or lesion within the brain. Further clinical evaluation would be necessary to determine the exact nature and cause of this mass, but it suggests the presence of a pathological process affecting the central nervous system.",
+        "success": true,
+        "model_type": "qwen2.5vl",
+        "model_info": {
+          "model_type": "qwen2.5vl",
+          "model_path": "/root/HuatuoGPT-Vision/HuatuoGPT-Vision-7B-Qwen2.5VL"
+        },
+        "ground_truth_answer": "Yes, this MRI scan shows an abnormal mass in the left hemisphere of the brain. The lesion appears to be a hyperintense mass with surrounding edema, which is a characteristic feature of a brain tumor.",
+        "sample_id": 20,
+        "original_sample_fields": [
+          "Question",
+          "Answer",
+          "image"
+        ]
+      },
+      {
+        "question": "Is there any tumour any present? If present tell us the diagnosis.\r\n",
+        "image_path": "temp_image.png",
+        "generated_answer": "Yes, there is a large mass visible in the right parietal lobe of the brain on this MRI scan. Based on its appearance and location, it appears to be an infiltrative glioma or high-grade glioma such as glioblastoma multiforme (GBM). Gliomas are primary brain tumors that arise from glial cells, which support neurons. High-grade gliomas like GBM are aggressive and rapidly growing tumors with poor prognosis if left untreated. Further evaluation by a neuro-oncologist would be necessary for definitive diagnosis and treatment planning.",
+        "success": true,
+        "model_type": "qwen2.5vl",
+        "model_info": {
+          "model_type": "qwen2.5vl",
+          "model_path": "/root/HuatuoGPT-Vision/HuatuoGPT-Vision-7B-Qwen2.5VL"
+        },
+        "ground_truth_answer": "The MRI scan you uploaded appears to show an abnormal mass lesion in the brain, which is likely a tumor.",
+        "sample_id": 21,
+        "original_sample_fields": [
+          "Question",
+          "Answer",
+          "image"
+        ]
+      },
+      {
+        "question": "Does the lesion appear to infiltrate surrounding brain tissue?",
+        "image_path": "temp_image.png",
+        "generated_answer": "The image does not show clear signs of infiltration into adjacent brain structures, but further detailed analysis and clinical correlation would be necessary for an accurate assessment.",
+        "success": true,
+        "model_type": "qwen2.5vl",
+        "model_info": {
+          "model_type": "qwen2.5vl",
+          "model_path": "/root/HuatuoGPT-Vision/HuatuoGPT-Vision-7B-Qwen2.5VL"
+        },
+        "ground_truth_answer": "The MRI scan shows a lesion with ill-defined borders, suggesting infiltration into the surrounding brain tissue. The heterogeneous signal intensity and significant perilesional edema indicate an aggressive tumor, likely a high-grade glioma such as glioblastoma multiforme (GBM)",
+        "sample_id": 22,
+        "original_sample_fields": [
+          "Question",
+          "Answer",
+          "image"
+        ]
+      },
+      {
+        "question": "Can you detect any tumor in this image?",
+        "image_path": "temp_image.png",
+        "generated_answer": "Yes, the image shows an enhancing mass lesion located centrally within the brain tissue. This is indicative of a possible neoplastic process or other pathological condition that requires further clinical correlation and diagnostic evaluation to determine its nature and appropriate management. The presence of such a lesion warrants careful assessment by medical professionals for accurate diagnosis and treatment planning.",
+        "success": true,
+        "model_type": "qwen2.5vl",
+        "model_info": {
+          "model_type": "qwen2.5vl",
+          "model_path": "/root/HuatuoGPT-Vision/HuatuoGPT-Vision-7B-Qwen2.5VL"
+        },
+        "ground_truth_answer": "Yes, the MRI scan shows a large, irregularly shaped, contrast-enhancing lesion with a butterfly-like appearance crossing the midline through the corpus callosum.Further evaluation with histopathology and advanced imaging is recommended for confirmation.",
+        "sample_id": 23,
+        "original_sample_fields": [
+          "Question",
+          "Answer",
+          "image"
+        ]
+      },
+      {
+        "question": "What type of brain tumor is visible in this scan?",
+        "image_path": "temp_image.png",
+        "generated_answer": "The image shows an astrocytoma, which is a type of glioma or brain tumor originating from the glial cells that support and protect neurons in the central nervous system. Astrocytomas can be classified into different grades based on their cellular characteristics and growth patterns, with higher-grade tumors being more aggressive and malignant. The specific grade of the astrocytoma cannot be definitively determined from this single axial MRI slice alone, but it appears to be a well-defined lesion within the cerebral parenchyma. Further evaluation by a radiologist would be necessary to provide a more detailed assessment and classification of the astrocytoma's",
+        "success": true,
+        "model_type": "qwen2.5vl",
+        "model_info": {
+          "model_type": "qwen2.5vl",
+          "model_path": "/root/HuatuoGPT-Vision/HuatuoGPT-Vision-7B-Qwen2.5VL"
+        },
+        "ground_truth_answer": "This MRI scan does not show any obvious signs of a brain tumor. The brain structures appear symmetrical, and there is no visible abnormal mass, contrast enhancement, or significant edema. However, subtle abnormalities may require further evaluation by a radiologist or neurologist.",
+        "sample_id": 24,
+        "original_sample_fields": [
+          "Question",
+          "Answer",
+          "image"
+        ]
+      },
+      {
+        "question": "Does this MRI scan indicate the presence of a brain tumor?",
+        "image_path": "temp_image.png",
+        "generated_answer": "The MRI image does not show any obvious signs of a brain tumor such as abnormal masses, significant asymmetry in tissue density, or irregularities that typically suggest neoplastic growths. The ventricles and sulci appear normal without evidence of compression or shift, which often accompanies tumors. However, it's important to note that subtle changes might be missed on an unenhanced MRI like this one. A contrast-enhanced study would provide more detailed information about vascular structures and potential lesions. If there is clinical suspicion for a tumor based on symptoms or other diagnostic findings, further imaging with gadolinium enhancement could be recommended.",
+        "success": true,
+        "model_type": "qwen2.5vl",
+        "model_info": {
+          "model_type": "qwen2.5vl",
+          "model_path": "/root/HuatuoGPT-Vision/HuatuoGPT-Vision-7B-Qwen2.5VL"
+        },
+        "ground_truth_answer": "This MRI scan does not show any obvious signs of a brain tumor.",
+        "sample_id": 25,
+        "original_sample_fields": [
+          "Question",
+          "Answer",
+          "image"
+        ]
+      },
+      {
+        "question": "Is there any contrast enhancement in the MRI image?",
+        "image_path": "temp_image.png",
+        "generated_answer": "No, there is no evidence of contrast enhancement visible in this T2-weighted MRI scan of the brain.",
+        "success": true,
+        "model_type": "qwen2.5vl",
+        "model_info": {
+          "model_type": "qwen2.5vl",
+          "model_path": "/root/HuatuoGPT-Vision/HuatuoGPT-Vision-7B-Qwen2.5VL"
+        },
+        "ground_truth_answer": "The MRI scan you provided does not appear to show significant contrast enhancement. Typically, contrast enhancement is seen in T1-weighted post-contrast images, where abnormal areas appear brighter due to the uptake of contrast agents.",
+        "sample_id": 26,
+        "original_sample_fields": [
+          "Question",
+          "Answer",
+          "image"
+        ]
+      },
+      {
+        "question": "Does this MRI indicate a benign or malignant tumor?",
+        "image_path": "temp_image.png",
+        "generated_answer": "Based on the information provided in the reference, it is difficult to definitively determine whether the lesion represents a benign or malignant tumor without additional clinical and radiological data. The reference indicates that the lesion appears well-defined with homogeneous enhancement after contrast administration, which can be seen in both benign and malignant lesions. Further evaluation by a qualified medical professional would be necessary to make an accurate diagnosis.",
+        "success": true,
+        "model_type": "qwen2.5vl",
+        "model_info": {
+          "model_type": "qwen2.5vl",
+          "model_path": "/root/HuatuoGPT-Vision/HuatuoGPT-Vision-7B-Qwen2.5VL"
+        },
+        "ground_truth_answer": "The provided MRI scan does not show any obvious signs of a brain tumor, either benign or malignant. The brain structures appear symmetrical without evident mass effect, contrast enhancement, or irregular lesions typically associated with tumors.",
+        "sample_id": 27,
+        "original_sample_fields": [
+          "Question",
+          "Answer",
+          "image"
+        ]
+      },
+      {
+        "question": "Can you determine the location of the brain tumor?",
+        "image_path": "temp_image.png",
+        "generated_answer": "The image does not provide specific information about the exact anatomical location or size of the brain tumor, as it is an axial view and only shows one slice of the brain. Further imaging studies would be needed to accurately localize and characterize the tumor's position within the brain structure.",
+        "success": true,
+        "model_type": "qwen2.5vl",
+        "model_info": {
+          "model_type": "qwen2.5vl",
+          "model_path": "/root/HuatuoGPT-Vision/HuatuoGPT-Vision-7B-Qwen2.5VL"
+        },
+        "ground_truth_answer": "The MRI scan does not show any clear evidence of a brain tumor. The brain appears symmetrical, and no obvious mass effect, contrast enhancement, or irregular lesions are visible. However, a detailed evaluation by a radiologist is necessary for an accurate diagnosis.",
+        "sample_id": 28,
+        "original_sample_fields": [
+          "Question",
+          "Answer",
+          "image"
+        ]
+      },
+      {
+        "question": "Is there any evidence of brain tumour?",
+        "image_path": "temp_image.png",
+        "generated_answer": "",
+        "success": true,
+        "model_type": "qwen2.5vl",
+        "model_info": {
+          "model_type": "qwen2.5vl",
+          "model_path": "/root/HuatuoGPT-Vision/HuatuoGPT-Vision-7B-Qwen2.5VL"
+        },
+        "ground_truth_answer": "This MRI scan does not show clear signs of a brain tumor. The brain structures appear symmetrical without noticeable mass effects or abnormal contrast enhancement.",
+        "sample_id": 29,
+        "original_sample_fields": [
+          "Question",
+          "Answer",
+          "image"
+        ]
+      },
+      {
+        "question": "Does this image indicate the presence of a brain tumor?",
+        "image_path": "temp_image.png",
+        "generated_answer": "",
+        "success": true,
+        "model_type": "qwen2.5vl",
+        "model_info": {
+          "model_type": "qwen2.5vl",
+          "model_path": "/root/HuatuoGPT-Vision/HuatuoGPT-Vision-7B-Qwen2.5VL"
+        },
+        "ground_truth_answer": "This MRI scan does not show clear evidence of a brain tumor. The brain structures appear relatively normal, with no obvious mass effect, contrast enhancement, or irregular growth.",
+        "sample_id": 30,
+        "original_sample_fields": [
+          "Question",
+          "Answer",
+          "image"
+        ]
+      },
+      {
+        "question": "Does the tumor show well-defined borders?",
+        "image_path": "temp_image.png",
+        "generated_answer": "Yes, the tumor shows relatively well-defined margins in this MRI scan.",
+        "success": true,
+        "model_type": "qwen2.5vl",
+        "model_info": {
+          "model_type": "qwen2.5vl",
+          "model_path": "/root/HuatuoGPT-Vision/HuatuoGPT-Vision-7B-Qwen2.5VL"
+        },
+        "ground_truth_answer": "Image does not clearly indicate the presence of a tumor with well-defined borders.",
+        "sample_id": 31,
+        "original_sample_fields": [
+          "Question",
+          "Answer",
+          "image"
+        ]
+      },
+      {
+        "question": "What type of brain tumor is visible in this scan?",
+        "image_path": "temp_image.png",
+        "generated_answer": "Based on the information provided, the image shows an astrocytoma, which is a type of brain tumor originating from glial cells (astrocytes) in the central nervous system. Astrocytomas can occur at any age and may be classified as low-grade or high-grade based on their histological characteristics and growth behavior.\n",
+        "success": true,
+        "model_type": "qwen2.5vl",
+        "model_info": {
+          "model_type": "qwen2.5vl",
+          "model_path": "/root/HuatuoGPT-Vision/HuatuoGPT-Vision-7B-Qwen2.5VL"
+        },
+        "ground_truth_answer": "No presence or type of a brain tumor from this MRI scan. Brain tumor diagnosis requires expert analysis by a radiologist or medical professional, who can assess various imaging features such as location",
+        "sample_id": 32,
+        "original_sample_fields": [
+          "Question",
+          "Answer",
+          "image"
+        ]
+      },
+      {
+        "question": "Does this scan suggest a brain tumor?",
+        "image_path": "temp_image.png",
+        "generated_answer": "The MRI image does not show any clear signs of a brain tumor based on the visible structures and signal intensities in this particular slice. However, it is important to note that a comprehensive evaluation would require multiple slices and possibly additional imaging sequences or modalities for an accurate diagnosis. I recommend discussing these findings with your healthcare provider who can provide more detailed information and guidance specific to your case.",
+        "success": true,
+        "model_type": "qwen2.5vl",
+        "model_info": {
+          "model_type": "qwen2.5vl",
+          "model_path": "/root/HuatuoGPT-Vision/HuatuoGPT-Vision-7B-Qwen2.5VL"
+        },
+        "ground_truth_answer": "This brain scan does not show any obvious signs of a brain tumor. The brain structures appear symmetrical, and there is no visible abnormal mass, contrast enhancement, or significant edema. However, subtle abnormalities may require further evaluation by a radiologist or neurologist.",
+        "sample_id": 33,
+        "original_sample_fields": [
+          "Question",
+          "Answer",
+          "image"
+        ]
+      },
+      {
+        "question": "Is there any evidence of brain tumour?",
+        "image_path": "temp_image.png",
+        "generated_answer": "",
+        "success": true,
+        "model_type": "qwen2.5vl",
+        "model_info": {
+          "model_type": "qwen2.5vl",
+          "model_path": "/root/HuatuoGPT-Vision/HuatuoGPT-Vision-7B-Qwen2.5VL"
+        },
+        "ground_truth_answer": "There is no obvious sign of a brain tumour on this MRI scan.  There is no discernible mass effect, contrast enhancement, or atypical growth, and the brain structures seem to be fairly normal.",
+        "sample_id": 34,
+        "original_sample_fields": [
+          "Question",
+          "Answer",
+          "image"
+        ]
+      },
+      {
+        "question": "Is it possible to locate the brain tumour?",
+        "image_path": "temp_image.png",
+        "generated_answer": "The image shows an axial view of a brain MRI scan, which appears to be a T2-weighted or FLAIR sequence based on the high signal intensity in certain regions. The most prominent feature is a hyperintense lesion located in the left temporal lobe region, suggestive of a brain tumor. However, without additional clinical information and further imaging studies, such as contrast-enhanced sequences or follow-up scans, it would not be possible to definitively determine whether this lesion can be surgically resected or if it represents another type of pathology that may require alternative treatment approaches. A comprehensive evaluation by a qualified radiologist and neurologist",
+        "success": true,
+        "model_type": "qwen2.5vl",
+        "model_info": {
+          "model_type": "qwen2.5vl",
+          "model_path": "/root/HuatuoGPT-Vision/HuatuoGPT-Vision-7B-Qwen2.5VL"
+        },
+        "ground_truth_answer": "There is no obvious indication of a brain tumour on the MRI scan.  There is no discernible mass effect, contrast enhancement, or irregular lesions, and the brain seems symmetrical.  However, an accurate diagnosis requires a thorough evaluation by a radiologist.",
+        "sample_id": 35,
+        "original_sample_fields": [
+          "Question",
+          "Answer",
+          "image"
+        ]
+      },
+      {
+        "question": "What kind of brain tumour does this scan show?",
+        "image_path": "temp_image.png",
+        "generated_answer": "",
+        "success": true,
+        "model_type": "qwen2.5vl",
+        "model_info": {
+          "model_type": "qwen2.5vl",
+          "model_path": "/root/HuatuoGPT-Vision/HuatuoGPT-Vision-7B-Qwen2.5VL"
+        },
+        "ground_truth_answer": "There are no overt indications of a brain tumour on this MRI scan. There is no discernible abnormal mass, contrast enhancement, or severe oedema, and the brain structures seem symmetrical. Subtle anomalies, however, might need more assessment by a neurologist or radiologist.",
+        "sample_id": 36,
+        "original_sample_fields": [
+          "Question",
+          "Answer",
+          "image"
+        ]
+      },
+      {
+        "question": "Is there any abnormal mass present in this MRI?",
+        "image_path": "temp_image.png",
+        "generated_answer": "No, the image does not show an obvious abnormal mass. The brain structures appear normal with no visible lesions or abnormalities.",
+        "success": true,
+        "model_type": "qwen2.5vl",
+        "model_info": {
+          "model_type": "qwen2.5vl",
+          "model_path": "/root/HuatuoGPT-Vision/HuatuoGPT-Vision-7B-Qwen2.5VL"
+        },
+        "ground_truth_answer": "No abnormal mass is present in the MRI. The brain is looking healthy and good.",
+        "sample_id": 37,
+        "original_sample_fields": [
+          "Question",
+          "Answer",
+          "image"
+        ]
+      },
+      {
+        "question": "Does this scan suggest a benign tumor?",
+        "image_path": "temp_image.png",
+        "generated_answer": "",
+        "success": true,
+        "model_type": "qwen2.5vl",
+        "model_info": {
+          "model_type": "qwen2.5vl",
+          "model_path": "/root/HuatuoGPT-Vision/HuatuoGPT-Vision-7B-Qwen2.5VL"
+        },
+        "ground_truth_answer": "No clear indications of a benign or malignant brain tumour are visible in the provided MRI scan. The structures of the brain seem symmetrical, with no visible contrast enhancement, mass effect, or irregular lesions that are usually found in tumours.",
+        "sample_id": 38,
+        "original_sample_fields": [
+          "Question",
+          "Answer",
+          "image"
+        ]
+      },
+      {
+        "question": "Does the scan show signs of tumor?",
+        "image_path": "temp_image.png",
+        "generated_answer": "",
+        "success": true,
+        "model_type": "qwen2.5vl",
+        "model_info": {
+          "model_type": "qwen2.5vl",
+          "model_path": "/root/HuatuoGPT-Vision/HuatuoGPT-Vision-7B-Qwen2.5VL"
+        },
+        "ground_truth_answer": "A brain tumour is not clearly visible on this MRI scan. The structures of the brain seem to be developing normally, with no discernible growth irregularities, contrast enhancement, or mass effect.",
+        "sample_id": 39,
+        "original_sample_fields": [
+          "Question",
+          "Answer",
+          "image"
+        ]
+      },
+      {
+        "question": "Does the tumor show well-defined borders?",
+        "image_path": "temp_image.png",
+        "generated_answer": "No, the tumor does not have clear or distinct margins; it appears to infiltrate and blend into surrounding brain tissue without sharp demarcation.",
+        "success": true,
+        "model_type": "qwen2.5vl",
+        "model_info": {
+          "model_type": "qwen2.5vl",
+          "model_path": "/root/HuatuoGPT-Vision/HuatuoGPT-Vision-7B-Qwen2.5VL"
+        },
+        "ground_truth_answer": "There aren't any clear indications of a brain tumour on this MRI. No obvious abnormal mass, contrast enhancement, or severe oedema is present, and the brain structures seem symmetrical. However, minor anomalies might need to be examined further by a neurologist or radiologist.",
+        "sample_id": 40,
+        "original_sample_fields": [
+          "Question",
+          "Answer",
+          "image"
+        ]
+      },
+      {
+        "question": "Tell me the condition of the brain. Healthy or having a tumor?",
+        "image_path": "temp_image.png",
+        "generated_answer": "The image shows an axial view of the brain, and there is no visible abnormality such as a tumor in this particular slice. The ventricles appear normal without any signs of enlargement that might suggest hydrocephalus. However, it's important to note that MRI scans can only provide information about certain types of abnormalities, and other imaging modalities like CT scans may be necessary for a comprehensive evaluation. Additionally, clinical correlation with patient symptoms and history is crucial before making a definitive diagnosis.",
+        "success": true,
+        "model_type": "qwen2.5vl",
+        "model_info": {
+          "model_type": "qwen2.5vl",
+          "model_path": "/root/HuatuoGPT-Vision/HuatuoGPT-Vision-7B-Qwen2.5VL"
+        },
+        "ground_truth_answer": "The brain appears to be in good health. This MRI scan does not clearly show a brain tumour. There are no visible signs of mass effect, contrast enhancement, or growth abnormalities, suggesting that the brain's structures are developing normally.",
+        "sample_id": 41,
+        "original_sample_fields": [
+          "Question",
+          "Answer",
+          "image"
+        ]
+      },
+      {
+        "question": "What does this MRI scan say about the health of the brain?",
+        "image_path": "temp_image.png",
+        "generated_answer": "The MRI image shows an axial view of the brain, which appears to be normal without any obvious abnormalities or lesions visible in this particular slice. However, it's important to note that a single MRI scan may not provide a complete picture of overall brain health and function. Additional imaging modalities, such as functional MRI (fMRI) or diffusion tensor imaging (DTI), could offer more insights into brain activity and connectivity patterns.\n\nTo fully assess brain health, a comprehensive evaluation by a qualified medical professional would be necessary, taking into account various factors like patient history, symptoms, and other diagnostic tests. The interpretation of MRI scans should always be done",
+        "success": true,
+        "model_type": "qwen2.5vl",
+        "model_info": {
+          "model_type": "qwen2.5vl",
+          "model_path": "/root/HuatuoGPT-Vision/HuatuoGPT-Vision-7B-Qwen2.5VL"
+        },
+        "ground_truth_answer": "There are no health problems. The brain is in excellent health and condition. Only a qualified radiologist can provide additional clarifications.",
+        "sample_id": 42,
+        "original_sample_fields": [
+          "Question",
+          "Answer",
+          "image"
+        ]
+      },
+      {
+        "question": "Is it possible to locate the brain tumour?",
+        "image_path": "temp_image.png",
+        "generated_answer": "",
+        "success": true,
+        "model_type": "qwen2.5vl",
+        "model_info": {
+          "model_type": "qwen2.5vl",
+          "model_path": "/root/HuatuoGPT-Vision/HuatuoGPT-Vision-7B-Qwen2.5VL"
+        },
+        "ground_truth_answer": "There is no obvious indication of a brain tumour on the MRI scan.  There is no discernible mass effect, contrast enhancement, or irregular lesions, and the brain seems symmetrical.  However, an accurate diagnosis requires a thorough evaluation by a radiologist.",
+        "sample_id": 43,
+        "original_sample_fields": [
+          "Question",
+          "Answer",
+          "image"
+        ]
+      },
+      {
+        "question": "Can you determine the location of the brain tumor?",
+        "image_path": "temp_image.png",
+        "generated_answer": "The image does not provide enough information to accurately locate or identify any specific brain tumors, as it only shows an axial view of the brain without additional clinical context or imaging modalities that could help localize such abnormalities.",
+        "success": true,
+        "model_type": "qwen2.5vl",
+        "model_info": {
+          "model_type": "qwen2.5vl",
+          "model_path": "/root/HuatuoGPT-Vision/HuatuoGPT-Vision-7B-Qwen2.5VL"
+        },
+        "ground_truth_answer": "No obvious signs of a brain tumour are visible on the MRI scan. There are no discernible abnormalities, contrast enhancement, or mass effect, and the brain seems symmetrical. Nonetheless, a thorough assessment by a radiologist is required for a precise diagnosis.",
+        "sample_id": 44,
+        "original_sample_fields": [
+          "Question",
+          "Answer",
+          "image"
+        ]
+      },
+      {
+        "question": "Does the scan show signs of tumor?",
+        "image_path": "temp_image.png",
+        "generated_answer": "",
+        "success": true,
+        "model_type": "qwen2.5vl",
+        "model_info": {
+          "model_type": "qwen2.5vl",
+          "model_path": "/root/HuatuoGPT-Vision/HuatuoGPT-Vision-7B-Qwen2.5VL"
+        },
+        "ground_truth_answer": "On this MRI scan, a brain tumour is not clearly visible. There are no obvious effects of mass effect, contrast enhancement, or growth abnormalities, and the brain's structures appear to be developing normally.",
+        "sample_id": 45,
+        "original_sample_fields": [
+          "Question",
+          "Answer",
+          "image"
+        ]
+      },
+      {
+        "question": "Does this MRI show a recurrent brain tumor?",
+        "image_path": "temp_image.png",
+        "generated_answer": "Yes, the image shows evidence of a recurrent brain tumor in the right parietal lobe region. The hyperintense lesion visible on the T2-weighted FLAIR sequence is consistent with a recurrence or progression of a previously treated glioblastoma multiforme (GBM) tumor.",
+        "success": true,
+        "model_type": "qwen2.5vl",
+        "model_info": {
+          "model_type": "qwen2.5vl",
+          "model_path": "/root/HuatuoGPT-Vision/HuatuoGPT-Vision-7B-Qwen2.5VL"
+        },
+        "ground_truth_answer": "No sign of recurrent brain tumor. The Brain is in healthy condition.",
+        "sample_id": 46,
+        "original_sample_fields": [
+          "Question",
+          "Answer",
+          "image"
+        ]
+      },
+      {
+        "question": "What is the possible diagnosis based on this MRI?",
+        "image_path": "temp_image.png",
+        "generated_answer": "Based on the provided information, the possible diagnosis could be **acute disseminated encephalomyelitis (ADEM)** or another demyelinating condition such as **multiple sclerosis**.\n\n### Key Observations:\n1. **Symmetric T2/FLAIR Hyperintensities**: The bilateral and symmetric hyperintense lesions in the periventricular white matter suggest an inflammatory process affecting multiple regions of the brain.\n   \n2. **No Significant Mass Effect or Midline Shift**: There's no evidence of significant mass effect or midline shift, which helps differentiate from more aggressive pathologies like tumors or severe infections.\n\n3.",
+        "success": true,
+        "model_type": "qwen2.5vl",
+        "model_info": {
+          "model_type": "qwen2.5vl",
+          "model_path": "/root/HuatuoGPT-Vision/HuatuoGPT-Vision-7B-Qwen2.5VL"
+        },
+        "ground_truth_answer": "Don't need any diagnosis because the brain is already in healthy condition. Further advice can only be given by professionals.",
+        "sample_id": 47,
+        "original_sample_fields": [
+          "Question",
+          "Answer",
+          "image"
+        ]
+      },
+      {
+        "question": "Does this scan show a contrast-enhancing brain lesion?",
+        "image_path": "temp_image.png",
+        "generated_answer": "",
+        "success": true,
+        "model_type": "qwen2.5vl",
+        "model_info": {
+          "model_type": "qwen2.5vl",
+          "model_path": "/root/HuatuoGPT-Vision/HuatuoGPT-Vision-7B-Qwen2.5VL"
+        },
+        "ground_truth_answer": "There doesn't seem to be much contrast enhancement in the MRI scan you sent. Contrast enhancement is typically observed in T1-weighted post-contrast images, where the uptake of contrast agents causes abnormal areas to appear brighter.",
+        "sample_id": 48,
+        "original_sample_fields": [
+          "Question",
+          "Answer",
+          "image"
+        ]
+      },
+      {
+        "question": "Is this a healthy brain or is there a tumor present?",
+        "image_path": "temp_image.png",
+        "generated_answer": "",
+        "success": true,
+        "model_type": "qwen2.5vl",
+        "model_info": {
+          "model_type": "qwen2.5vl",
+          "model_path": "/root/HuatuoGPT-Vision/HuatuoGPT-Vision-7B-Qwen2.5VL"
+        },
+        "ground_truth_answer": "An actual tumour is present. A large, hyperintense (bright) mass in the right frontal lobe is visible on this axial FLAIR MRI, along with surrounding oedema. ",
+        "sample_id": 49,
+        "original_sample_fields": [
+          "Question",
+          "Answer",
+          "image"
+        ]
+      },
+      {
+        "question": "Does this MRI show signs of a glioblastoma?",
+        "image_path": "temp_image.png",
+        "generated_answer": "",
+        "success": true,
+        "model_type": "qwen2.5vl",
+        "model_info": {
+          "model_type": "qwen2.5vl",
+          "model_path": "/root/HuatuoGPT-Vision/HuatuoGPT-Vision-7B-Qwen2.5VL"
+        },
+        "ground_truth_answer": "An aggressive primary brain tumour known as glioblastoma multiforme (GBM) is most likely the malignant tumour shown on this MRI.Additional testing using contrast-enhanced MRI, biopsy, and clinical correlation are required to confirm the diagnosis.",
+        "sample_id": 50,
+        "original_sample_fields": [
+          "Question",
+          "Answer",
+          "image"
+        ]
+      },
+      {
+        "question": "Is the tumor present? If yes tell me where it is located and what is it's size?",
+        "image_path": "temp_image.png",
+        "generated_answer": " addCriterion",
+        "success": true,
+        "model_type": "qwen2.5vl",
+        "model_info": {
+          "model_type": "qwen2.5vl",
+          "model_path": "/root/HuatuoGPT-Vision/HuatuoGPT-Vision-7B-Qwen2.5VL"
+        },
+        "ground_truth_answer": "Yes, there is a tumor present in the image. It appears to be located in the left hemisphere of the brain, specifically in the parietal or temporal lobe region. The tumor is hyperintense (bright) on this MRI scan, suggesting possible contrast enhancement, which is common in high-grade gliomas or metastases. Regarding it's size I cannot tell you precisely about it.",
+        "sample_id": 51,
+        "original_sample_fields": [
+          "Question",
+          "Answer",
+          "image"
+        ]
+      },
+      {
+        "question": "What is the condition of the brain in this brain MRI? Is it healthy?",
+        "image_path": "temp_image.png",
+        "generated_answer": " 自动生成的描述如下：\n\n这张图像是一张脑部磁共振成像（MRI）扫描图。从图像中可以看到，大脑组织结构清晰可见，灰质和白质对比明显。\n\n在左侧颞叶区域，可以观察到一个明显的异常信号区域。该区域呈现出较亮的信号强度，与周围正常脑实质形成鲜明对比。这种高信号表现可能提示存在病变或损伤。\n\n具体来说，在左侧颞叶内侧区域，有一个边界相对清楚、形状不规则的病灶样改变。该病灶内部信号较为均匀，但边缘部分似乎有一些轻微的强化现象，这可能",
+        "success": true,
+        "model_type": "qwen2.5vl",
+        "model_info": {
+          "model_type": "qwen2.5vl",
+          "model_path": "/root/HuatuoGPT-Vision/HuatuoGPT-Vision-7B-Qwen2.5VL"
+        },
+        "ground_truth_answer": "There is a large, irregularly shaped, contrast-enhancing mass in the right hemisphere, likely in the temporal or parietal lobe. The lesion exhibits a ring-enhancing appearance, which is often associated with high-grade gliomas (such as glioblastoma multiforme) or metastases. Surrounding vasogenic edema and midline shift may also be present, indicating mass effect and possible increased intracranial pressure.",
+        "sample_id": 52,
+        "original_sample_fields": [
+          "Question",
+          "Answer",
+          "image"
+        ]
+      },
+      {
+        "question": "Does this brain show any signs of brain tumor? If yes please tell me what is the possible diagnosis of it?",
+        "image_path": "temp_image.png",
+        "generated_answer": "",
+        "success": true,
+        "model_type": "qwen2.5vl",
+        "model_info": {
+          "model_type": "qwen2.5vl",
+          "model_path": "/root/HuatuoGPT-Vision/HuatuoGPT-Vision-7B-Qwen2.5VL"
+        },
+        "ground_truth_answer": "Yes, this brain MRI shows clear signs of a brain tumor. The image reveals a well-defined, contrast-enhancing mass with a ring-like structure in the left hemisphere. This type of appearance is highly suggestive of Glioblastoma Multiforme (GBM), which is an aggressive and malignant primary brain tumor known for its rapid growth and infiltration into surrounding brain tissue. Another possible diagnosis includes metastatic brain tumors, which originate from cancer in other parts of the body and spread to the brain.",
+        "sample_id": 53,
+        "original_sample_fields": [
+          "Question",
+          "Answer",
+          "image"
+        ]
+      },
+      {
+        "question": "Does this scan suggest a benign tumor?",
+        "image_path": "temp_image.png",
+        "generated_answer": "",
+        "success": true,
+        "model_type": "qwen2.5vl",
+        "model_info": {
+          "model_type": "qwen2.5vl",
+          "model_path": "/root/HuatuoGPT-Vision/HuatuoGPT-Vision-7B-Qwen2.5VL"
+        },
+        "ground_truth_answer": "This MRI scan shows a well-defined, contrast-enhancing lesion in the right hemisphere of the brain, with surrounding edema. While a well-circumscribed tumor with minimal infiltration may suggest a benign nature, the presence of significant contrast enhancement and peritumoral edema raises concerns about the possibility of a malignant or metastatic lesion.",
+        "sample_id": 54,
+        "original_sample_fields": [
+          "Question",
+          "Answer",
+          "image"
+        ]
+      },
+      {
+        "question": "Can you help me with detecting tumor in this brain MRI?",
+        "image_path": "temp_image.png",
+        "generated_answer": "The image shows an axial view of the brain from an MRI scan, highlighting a significant abnormality located in the right hemisphere. The lesion appears as a large, irregularly shaped mass that is hyperintense on T1-weighted imaging and hypointense on T2-weighted imaging, suggesting it could be a high-grade glioma or metastatic disease. There's noticeable surrounding edema which causes midline shift towards the left side, indicating increased intracranial pressure. This finding warrants further investigation to determine the exact nature and extent of the pathology.",
+        "success": true,
+        "model_type": "qwen2.5vl",
+        "model_info": {
+          "model_type": "qwen2.5vl",
+          "model_path": "/root/HuatuoGPT-Vision/HuatuoGPT-Vision-7B-Qwen2.5VL"
+        },
+        "ground_truth_answer": "Yes, this brain MRI shows a well-defined, contrast-enhancing mass in the left hemisphere, likely within the frontal or parietal lobe. The lesion appears to have irregular enhancement, which raises suspicion for a high-grade tumor such as Glioblastoma Multiforme (GBM). The tumor's location is causing a midline shift, suggesting mass effect and potential increased intracranial pressure.",
+        "sample_id": 55,
+        "original_sample_fields": [
+          "Question",
+          "Answer",
+          "image"
+        ]
+      },
+      {
+        "question": "What is condition of brain? What can you the size of tumor, is small or big?",
+        "image_path": "temp_image.png",
+        "generated_answer": "",
+        "success": true,
+        "model_type": "qwen2.5vl",
+        "model_info": {
+          "model_type": "qwen2.5vl",
+          "model_path": "/root/HuatuoGPT-Vision/HuatuoGPT-Vision-7B-Qwen2.5VL"
+        },
+        "ground_truth_answer": "This MRI scan shows an abnormal lesion in the left hemisphere of the brain, located in the posterior frontal or parietal region. The lesion appears hyperintense with surrounding edema, suggesting a space-occupying mass effect. The presence of mass effect and midline shift indicates that the tumor is exerting pressure on surrounding brain structures, which may lead to neurological symptoms such as headaches, weakness, or cognitive impairment.",
+        "sample_id": 56,
+        "original_sample_fields": [
+          "Question",
+          "Answer",
+          "image"
+        ]
+      },
+      {
+        "question": "Is the brain tumor benign or malignant in this MRI?",
+        "image_path": "temp_image.png",
+        "generated_answer": "",
+        "success": true,
+        "model_type": "qwen2.5vl",
+        "model_info": {
+          "model_type": "qwen2.5vl",
+          "model_path": "/root/HuatuoGPT-Vision/HuatuoGPT-Vision-7B-Qwen2.5VL"
+        },
+        "ground_truth_answer": "This MRI scan shows a large, contrast-enhancing mass in the left frontal region with irregular borders and surrounding edema. The tumor exhibits a heterogeneous enhancement pattern, which is a concerning feature often associated with high-grade malignant tumors, rather than benign ones. The presence of significant peritumoral edema and mass effect, causing a midline shift, further supports the suspicion of an aggressive lesion. A likely diagnosis for this type of appearance is Glioblastoma Multiforme (GBM), which is the most common and aggressive primary malignant brain tumor in adults.",
+        "sample_id": 57,
+        "original_sample_fields": [
+          "Question",
+          "Answer",
+          "image"
+        ]
+      },
+      {
+        "question": "Can you detect any tumor in this image? If yes, tell us what are the possible diagnosis for it?",
+        "image_path": "temp_image.png",
+        "generated_answer": "Yes, there is an abnormality visible as a bright area on the left side of the brain in the MRI scan. This could represent a variety of conditions including a tumor, abscess, or other types of lesions such as demyelinating diseases like multiple sclerosis. The exact nature would depend further on clinical correlation and additional diagnostic tests.",
+        "success": true,
+        "model_type": "qwen2.5vl",
+        "model_info": {
+          "model_type": "qwen2.5vl",
+          "model_path": "/root/HuatuoGPT-Vision/HuatuoGPT-Vision-7B-Qwen2.5VL"
+        },
+        "ground_truth_answer": "Yes, the MRI scan indicates an abnormal bright lesion in the right frontal lobe, suggestive of a possible brain tumor. The lesion appears hyperintense on this MRI sequence, which may indicate contrast enhancement, edema, or necrosis. Possible diagnosis can be Anaplastic Astrocytoma – A malignant tumor that is less aggressive than GBM but still high-grade, often presenting with contrast enhancement and edema.",
+        "sample_id": 58,
+        "original_sample_fields": [
+          "Question",
+          "Answer",
+          "image"
+        ]
+      },
+      {
+        "question": "Tell me that brain is healthy or it shows tumor presence?",
+        "image_path": "temp_image.png",
+        "generated_answer": "The image depicts an axial view of the brain using MRI, specifically highlighting areas with abnormal signal intensities which suggest the presence of pathological changes. The bright area in the left hemisphere could indicate edema (swelling) and possibly hemorrhage within the tissue. This appearance can be associated with various conditions including tumors, infections, or other types of lesions. Given these findings, this brain scan does show evidence suggestive of a pathology rather than being indicative of a healthy state. Further clinical correlation and additional diagnostic tests would be necessary to determine the exact nature and cause of these abnormalities.",
+        "success": true,
+        "model_type": "qwen2.5vl",
+        "model_info": {
+          "model_type": "qwen2.5vl",
+          "model_path": "/root/HuatuoGPT-Vision/HuatuoGPT-Vision-7B-Qwen2.5VL"
+        },
+        "ground_truth_answer": "The MRI scan you provided does not appear to depict a healthy brain. There is an abnormal hyperintense (bright) region on the left hemisphere of the brain, which suggests the presence of a pathological condition. This could indicate a tumor, significant edema, or another abnormal mass effect causing midline shift and compression of the adjacent brain structures.",
+        "sample_id": 59,
+        "original_sample_fields": [
+          "Question",
+          "Answer",
+          "image"
+        ]
+      },
+      {
+        "question": "Does it have brain tumor? If it have please tell us where it is located?",
+        "image_path": "temp_image.png",
+        "generated_answer": "Yes, the MRI scan shows evidence of a brain tumor in the right frontal lobe region. The mass appears to be well-defined and has irregular borders with surrounding edema or swelling. This finding suggests the presence of an abnormal growth within the brain tissue that requires further evaluation by a medical professional for accurate diagnosis and appropriate treatment planning.",
+        "success": true,
+        "model_type": "qwen2.5vl",
+        "model_info": {
+          "model_type": "qwen2.5vl",
+          "model_path": "/root/HuatuoGPT-Vision/HuatuoGPT-Vision-7B-Qwen2.5VL"
+        },
+        "ground_truth_answer": "Yes, this MRI scan suggests the presence of a brain tumor. The lesion appears as a well-defined, contrast-enhancing mass with a central necrotic core and surrounding edema. The tumor is located in the right hemisphere of the brain, near the frontal or parietal lobe. The contrast enhancement and ring-like structure are commonly seen in high-grade gliomas, such as Glioblastoma Multiforme (GBM), or Metastatic Brain Tumors. However, other possibilities like Brain Abscess or Meningioma should also be considered based on clinical correlation and additional imaging findings. Consulting a neurologist or neurosurgeon for further evaluation and biopsy is essential for accurate diagnosis and treatment planning.",
+        "sample_id": 60,
+        "original_sample_fields": [
+          "Question",
+          "Answer",
+          "image"
+        ]
+      },
+      {
+        "question": "What it is the conditon of this brain MRI? Does it shows sympton of brain tumor?",
+        "image_path": "temp_image.png",
+        "generated_answer": "The image you're referring to appears to be an axial view from a contrast-enhanced T1-weighted MRI scan, which helps in identifying areas where there might be abnormal tissue growth or lesions due to their enhanced appearance after the injection of a contrast agent. The bright area indicated by the arrow suggests a region with increased uptake of the contrast material, often seen in tumors because they have more blood vessels than normal tissues and thus absorb more dye.\n\nThis could indeed indicate the presence of a brain tumor, but further diagnostic workup including additional imaging studies (like a CT scan) and possibly biopsy would be necessary for confirmation. It's important not to",
+        "success": true,
+        "model_type": "qwen2.5vl",
+        "model_info": {
+          "model_type": "qwen2.5vl",
+          "model_path": "/root/HuatuoGPT-Vision/HuatuoGPT-Vision-7B-Qwen2.5VL"
+        },
+        "ground_truth_answer": "Yes, this brain MRI appears to show a tumor. The lesion is well-defined, with contrast enhancement and surrounding edema, which are common indicators of a brain tumor. The location and appearance suggest a possible metastatic brain tumor or a high-grade glioma, such as a glioblastoma multiforme (GBM). The irregular margins and contrast enhancement are characteristic features of malignant tumors. However, further clinical evaluation, including biopsy and additional imaging.",
+        "sample_id": 61,
+        "original_sample_fields": [
+          "Question",
+          "Answer",
+          "image"
+        ]
+      },
+      {
+        "question": "Where the brain tumor is extaclt located? Can you name the location in brain terminology regions?",
+        "image_path": "temp_image.png",
+        "generated_answer": "The brain tumor appears to be located in the right temporal lobe, based on its position relative to surrounding anatomical structures visible in this MRI scan. The temporal lobes of the brain contain important functions such as memory formation and processing auditory information.",
+        "success": true,
+        "model_type": "qwen2.5vl",
+        "model_info": {
+          "model_type": "qwen2.5vl",
+          "model_path": "/root/HuatuoGPT-Vision/HuatuoGPT-Vision-7B-Qwen2.5VL"
+        },
+        "ground_truth_answer": "The brain tumor in this MRI appears to be located in the temporal lobe of the brain, specifically on the right hemisphere. The temporal lobe is responsible for functions related to memory, language comprehension, and auditory processing. Given the tumor's size and irregular contrast enhancement, it suggests a high-grade lesion, potentially a glioblastoma multiforme (GBM) or a metastatic brain tumor.",
+        "sample_id": 62,
+        "original_sample_fields": [
+          "Question",
+          "Answer",
+          "image"
+        ]
+      },
+      {
+        "question": "Tell me the condition of the brain. Healthy or having a tumor?",
+        "image_path": "temp_image.png",
+        "generated_answer": "The image shows an axial view of the brain with a significant abnormality in the left frontal lobe, which appears to be a large mass lesion. The characteristics suggest it could potentially represent a high-grade glioma (HGG), such as glioblastoma multiforme (GBM). However, without additional clinical information and further diagnostic workup, I cannot definitively confirm the specific diagnosis. Further evaluation by a neuro-oncologist would be necessary to determine the exact nature and extent of this pathological finding.",
+        "success": true,
+        "model_type": "qwen2.5vl",
+        "model_info": {
+          "model_type": "qwen2.5vl",
+          "model_path": "/root/HuatuoGPT-Vision/HuatuoGPT-Vision-7B-Qwen2.5VL"
+        },
+        "ground_truth_answer": "The MRI scan of the brain shows the presence of a contrast-enhancing lesion with a ring-like appearance, which strongly suggests a tumor rather than a healthy brain. The lesion is located in the left hemisphere, possibly within the parietal or temporal lobe. The characteristics of the tumor, such as the irregular borders and central necrotic region, are commonly seen in high-grade gliomas (such as glioblastoma multiforme, GBM) or metastatic brain tumors. The surrounding edema and mass effect indicate significant brain involvement. A definitive diagnosis would require further clinical evaluation, including a biopsy, to differentiate between tumor types.",
+        "sample_id": 63,
+        "original_sample_fields": [
+          "Question",
+          "Answer",
+          "image"
+        ]
+      },
+      {
+        "question": "You are a good doctor. Can you please tell me the condition of brain of my brother?",
+        "image_path": "temp_image.png",
+        "generated_answer": "",
+        "success": true,
+        "model_type": "qwen2.5vl",
+        "model_info": {
+          "model_type": "qwen2.5vl",
+          "model_path": "/root/HuatuoGPT-Vision/HuatuoGPT-Vision-7B-Qwen2.5VL"
+        },
+        "ground_truth_answer": "Looking at the provided MRI scan, there do not appear to be large, clearly defined tumors or severe abnormalities like those seen in high-grade malignancies. However, there are some white matter hyperintensities, which could be associated with various conditions such as mild ischemic changes, multiple sclerosis, or other neurological disorders. These findings need to be correlated with clinical symptoms and further medical evaluation.\r\n\r\nIf your brother is experiencing any neurological symptoms like headaches, seizures, memory loss, or weakness, please consult a doctor for a detailed assessment and necessary tests.",
+        "sample_id": 64,
+        "original_sample_fields": [
+          "Question",
+          "Answer",
+          "image"
+        ]
+      },
+      {
+        "question": "Is there any signs of brain tumor in the image? Please help me.",
+        "image_path": "temp_image.png",
+        "generated_answer": "",
+        "success": true,
+        "model_type": "qwen2.5vl",
+        "model_info": {
+          "model_type": "qwen2.5vl",
+          "model_path": "/root/HuatuoGPT-Vision/HuatuoGPT-Vision-7B-Qwen2.5VL"
+        },
+        "ground_truth_answer": "The provided MRI scan shows no obvious signs of a benign or malignant brain tumour.  The brain's structures appear to be symmetrical; there is no discernible mass effect, contrast enhancement, or irregular lesions, which are typically seen in tumours.",
+        "sample_id": 65,
+        "original_sample_fields": [
+          "Question",
+          "Answer",
+          "image"
+        ]
+      },
+      {
+        "question": "Hi Doctor! Can you tell me the presence of tumors in the image or not?",
+        "image_path": "temp_image.png",
+        "generated_answer": "I'm sorry, but I cannot identify any tumor-like structures based on this MRI scan alone without additional clinical information and expertise from medical professionals. The image appears to show normal brain anatomy with no obvious abnormalities visible. However, it's important to note that interpreting medical imaging requires specialized training and experience, so I would recommend consulting with your healthcare provider for an accurate diagnosis if needed.",
+        "success": true,
+        "model_type": "qwen2.5vl",
+        "model_info": {
+          "model_type": "qwen2.5vl",
+          "model_path": "/root/HuatuoGPT-Vision/HuatuoGPT-Vision-7B-Qwen2.5VL"
+        },
+        "ground_truth_answer": "This appears to be a FLAIR MRI scan of the brain. I do not see any obvious mass effect, significant contrast-enhancing lesions, or areas of abnormal hyperintensity suggestive of a large tumor",
+        "sample_id": 66,
+        "original_sample_fields": [
+          "Question",
+          "Answer",
+          "image"
+        ]
+      },
+      {
+        "question": "I am having headaches does that mean I am having brain tumor?",
+        "image_path": "temp_image.png",
+        "generated_answer": "Headaches can be caused by many different factors, including stress, dehydration, or even sinus issues, and they do not necessarily indicate the presence of a brain tumor. However, it's important to consult with your doctor for an accurate diagnosis and appropriate treatment plan based on your specific symptoms and medical history. They may recommend further tests like MRI scans if necessary to rule out any serious conditions such as tumors.",
+        "success": true,
+        "model_type": "qwen2.5vl",
+        "model_info": {
+          "model_type": "qwen2.5vl",
+          "model_path": "/root/HuatuoGPT-Vision/HuatuoGPT-Vision-7B-Qwen2.5VL"
+        },
+        "ground_truth_answer": "No, having certain headaches does not necessarily means people have tumors. There are no obvious signs of a benign or malignant brain tumour in the MRI scan that provides. There is no apparent contrast enhancement, mass effect, or irregular lesions that are typically seen in tumours, and the brain's structures appear to be symmetrical.",
+        "sample_id": 67,
+        "original_sample_fields": [
+          "Question",
+          "Answer",
+          "image"
+        ]
+      },
+      {
+        "question": "I am feeing very lazy and my head region is feeling very heavy. Is this a symptom of brain tumor?",
+        "image_path": "temp_image.png",
+        "generated_answer": "The MRI scan shows an abnormal mass in the right frontal lobe, which could be indicative of a brain tumor or other pathological condition affecting that area of the brain. However, without further clinical information and evaluation by a medical professional, it would not be appropriate to definitively diagnose any specific condition based solely on this imaging finding. I would recommend consulting with your healthcare provider for a comprehensive assessment and appropriate next steps.",
+        "success": true,
+        "model_type": "qwen2.5vl",
+        "model_info": {
+          "model_type": "qwen2.5vl",
+          "model_path": "/root/HuatuoGPT-Vision/HuatuoGPT-Vision-7B-Qwen2.5VL"
+        },
+        "ground_truth_answer": "Feeling heavy and lazy are generally symptoms of fever. A brain tumour is not clearly visible on this MRI scan.  The brain's structures seem to be developing normally, and there are no overt signs of growth abnormalities, contrast enhancement, or mass effect.",
+        "sample_id": 68,
+        "original_sample_fields": [
+          "Question",
+          "Answer",
+          "image"
+        ]
+      },
+      {
+        "question": "Hey Doctor! Can you just tell me the condition of my brain?",
+        "image_path": "temp_image.png",
+        "generated_answer": "",
+        "success": true,
+        "model_type": "qwen2.5vl",
+        "model_info": {
+          "model_type": "qwen2.5vl",
+          "model_path": "/root/HuatuoGPT-Vision/HuatuoGPT-Vision-7B-Qwen2.5VL"
+        },
+        "ground_truth_answer": "There are no overt indications of a benign or malignant brain tumour in the provided MRI scan.  There is no visible mass effect, contrast enhancement, or irregular lesions that are usually associated with tumours, and the brain structures appear symmetrical.",
+        "sample_id": 69,
+        "original_sample_fields": [
+          "Question",
+          "Answer",
+          "image"
+        ]
+      },
+      {
+        "question": "My wife is certainly having headache all day, does this MRI scan denotes an brain problem?",
+        "image_path": "temp_image.png",
+        "generated_answer": "I'm sorry to hear that your wife has been experiencing headaches for the entire day. However, based on the provided MRI image of her brain, I cannot definitively determine if there is any specific brain pathology or abnormality present. The image appears relatively normal without obvious signs of lesions, masses, or structural abnormalities.\n\nIt's important to note that while MRI scans can provide valuable information about the brain's anatomy and potential pathologies, they should be interpreted by qualified medical professionals who have access to the patient's full clinical history, physical examination findings, and other relevant diagnostic tests.\n\nIf you're concerned about your wife's persistent headaches, it would",
+        "success": true,
+        "model_type": "qwen2.5vl",
+        "model_info": {
+          "model_type": "qwen2.5vl",
+          "model_path": "/root/HuatuoGPT-Vision/HuatuoGPT-Vision-7B-Qwen2.5VL"
+        },
+        "ground_truth_answer": "Having headaches would be due to overwork, give some rest to her. Now talking of the brain condition, it is completely healthy because no sign of any obvious mass effect, significant contrast-enhancing lesions, or areas of abnormal hyperintensity suggestive of a large tumor",
+        "sample_id": 70,
+        "original_sample_fields": [
+          "Question",
+          "Answer",
+          "image"
+        ]
+      },
+      {
+        "question": "Is there evidence of a tumour on the scan?",
+        "image_path": "temp_image.png",
+        "generated_answer": "No, based on this MRI image alone, I cannot definitively confirm or rule out the presence of a tumor in the brain. The image shows some areas with abnormal signal intensity and mass effect, but without additional clinical information and further imaging studies, it would be premature to make any specific diagnosis regarding a potential tumor. A comprehensive evaluation by a qualified medical professional is necessary for an accurate assessment and appropriate management plan.",
+        "success": true,
+        "model_type": "qwen2.5vl",
+        "model_info": {
+          "model_type": "qwen2.5vl",
+          "model_path": "/root/HuatuoGPT-Vision/HuatuoGPT-Vision-7B-Qwen2.5VL"
+        },
+        "ground_truth_answer": "This MRI scan does not clearly show a brain tumour.  There are no visible signs of mass effect, contrast enhancement, or growth abnormalities, suggesting that the brain's structures are developing normally.",
+        "sample_id": 71,
+        "original_sample_fields": [
+          "Question",
+          "Answer",
+          "image"
+        ]
+      },
+      {
+        "question": "Does my wife's MRI scan indicate a brain issue? She has a headache all day.",
+        "image_path": "temp_image.png",
+        "generated_answer": "The MRI image of your wife’s brain does not show any abnormalities such as tumors, bleeding, or significant swelling that would typically correlate with severe headaches. The ventricles and sulci appear normal which is good news. However, persistent headaches can be caused by various factors including tension headaches, migraines, or even less common conditions like sinus issues or stress-related problems. It might also be worth considering other symptoms she may have to help narrow down the cause. I recommend discussing these findings further with her healthcare provider who could suggest additional tests if necessary based on her overall health history and current symptoms.",
+        "success": true,
+        "model_type": "qwen2.5vl",
+        "model_info": {
+          "model_type": "qwen2.5vl",
+          "model_path": "/root/HuatuoGPT-Vision/HuatuoGPT-Vision-7B-Qwen2.5VL"
+        },
+        "ground_truth_answer": "Overwork would be the cause of her headaches; let her get some rest.  Speaking of the brain condition, there are no notable contrast-enhancing lesions, areas of abnormal hyperintensity suggestive of a large tumour, or any obvious mass effect, indicating that it is completely healthy.",
+        "sample_id": 72,
+        "original_sample_fields": [
+          "Question",
+          "Answer",
+          "image"
+        ]
+      },
+      {
+        "question": "Hello, Doctor!  Can you tell me if there are any tumours in the MRI Scan?",
+        "image_path": "temp_image.png",
+        "generated_answer": "I'm sorry, but I can't provide medical advice or diagnosis based on this image alone. The presence of tumors would require further evaluation by a qualified medical professional who can interpret the full clinical context and additional diagnostic information. As an AI system, my role is to assist with general understanding and education about medical imaging, not to make definitive diagnoses. If you have concerns about potential abnormalities seen in your scan, please consult with your healthcare provider for a comprehensive assessment and appropriate next steps.",
+        "success": true,
+        "model_type": "qwen2.5vl",
+        "model_info": {
+          "model_type": "qwen2.5vl",
+          "model_path": "/root/HuatuoGPT-Vision/HuatuoGPT-Vision-7B-Qwen2.5VL"
+        },
+        "ground_truth_answer": "The provided MRI scan shows no obvious signs of a benign or malignant brain tumour.   The brain structures seem symmetrical, and there is no discernible mass effect, contrast enhancement, or irregular lesions that are typically linked to tumours.",
+        "sample_id": 73,
+        "original_sample_fields": [
+          "Question",
+          "Answer",
+          "image"
+        ]
+      },
+      {
+        "question": "You're a competent physician.  Could you please tell me my brother's brain condition?",
+        "image_path": "temp_image.png",
+        "generated_answer": "",
+        "success": true,
+        "model_type": "qwen2.5vl",
+        "model_info": {
+          "model_type": "qwen2.5vl",
+          "model_path": "/root/HuatuoGPT-Vision/HuatuoGPT-Vision-7B-Qwen2.5VL"
+        },
+        "ground_truth_answer": "There don't seem to be any large, well-defined tumours or serious abnormalities like those found in high-grade malignancies based on the provided MRI scan.  Nonetheless, there are some white matter hyperintensities that may be linked to multiple sclerosis, mild ischaemic changes, or other neurological disorders.  These results require additional medical assessment and correlation with clinical symptoms.\r\n\r\n For a thorough evaluation and any required tests, please see a doctor if your brother is exhibiting any neurological symptoms, such as headaches, seizures, memory loss, or weakness.",
+        "sample_id": 74,
+        "original_sample_fields": [
+          "Question",
+          "Answer",
+          "image"
+        ]
+      },
+      {
+        "question": "My head feels really heavy, and I'm feeling really lethargic.  Does this indicate a brain tumour?",
+        "image_path": "temp_image.png",
+        "generated_answer": "I understand your concerns about the symptoms you're experiencing. While it's understandable to be worried when something seems unusual or concerning, it's important not to jump to conclusions without further medical evaluation.\n\nThe MRI scan shows some areas of increased signal intensity in certain regions of the brain, which could potentially represent abnormalities such as tumors or other pathological processes. However, these findings alone do not confirm the presence of a tumor.\n\nThere can be many causes for headaches and lethargy, ranging from benign conditions like migraines or sinus issues to more serious underlying disorders that require prompt attention. It would be premature to assume a brain tumor based solely on imaging results",
+        "success": true,
+        "model_type": "qwen2.5vl",
+        "model_info": {
+          "model_type": "qwen2.5vl",
+          "model_path": "/root/HuatuoGPT-Vision/HuatuoGPT-Vision-7B-Qwen2.5VL"
+        },
+        "ground_truth_answer": "Generally speaking, fever symptoms include feeling lethargic and heavy.  This MRI scan does not clearly show a brain tumour.   There are no obvious indications of growth abnormalities, contrast enhancement, or mass effect, and the structures of the brain appear to be developing normally.",
+        "sample_id": 75,
+        "original_sample_fields": [
+          "Question",
+          "Answer",
+          "image"
+        ]
+      },
+      {
+        "question": "I'm experiencing headaches.  Does it imply that I have a brain tumour?",
+        "image_path": "temp_image.png",
+        "generated_answer": "It's understandable to be concerned when you experience symptoms like headache, but the presence of a brain tumor cannot always be determined solely from MRI images or other imaging studies without additional clinical information and examination by medical professionals. While certain patterns on an MRI can suggest potential abnormalities such as tumors, further evaluation is necessary for accurate diagnosis and appropriate treatment planning. It would be best to consult with your healthcare provider who can review all relevant factors and provide guidance based on their expertise. They may recommend additional tests or follow-up appointments if needed. Please don't hesitate to discuss any concerns you might have directly with your doctor.",
+        "success": true,
+        "model_type": "qwen2.5vl",
+        "model_info": {
+          "model_type": "qwen2.5vl",
+          "model_path": "/root/HuatuoGPT-Vision/HuatuoGPT-Vision-7B-Qwen2.5VL"
+        },
+        "ground_truth_answer": "No, having a particular headache does not always indicate that a person has a tumour.  The provided MRI scan shows no overt indications of a benign or malignant brain tumour.  The structures of the brain seem symmetrical, and there is no apparent contrast enhancement, mass effect, or irregular lesions that are commonly observed in tumours.",
+        "sample_id": 76,
+        "original_sample_fields": [
+          "Question",
+          "Answer",
+          "image"
+        ]
+      },
+      {
+        "question": "My son is frequent headaches. Doctor said to take an MRI, so what are it's results?",
+        "image_path": "temp_image.png",
+        "generated_answer": "I'm sorry, but I can't provide medical advice or interpret specific diagnostic imaging like MRIs without proper training and expertise in radiology. The image you provided appears to be an axial slice of the brain from an MRI scan, showing normal anatomical structures such as the cerebral hemispheres, ventricles, and sulci. However, interpreting subtle abnormalities or pathologies would require specialized knowledge that I don't possess. For a detailed analysis and diagnosis based on this MRI, I recommend consulting with a qualified radiologist who can thoroughly examine the images and provide appropriate guidance for your son's condition. They will have the necessary expertise to determine",
+        "success": true,
+        "model_type": "qwen2.5vl",
+        "model_info": {
+          "model_type": "qwen2.5vl",
+          "model_path": "/root/HuatuoGPT-Vision/HuatuoGPT-Vision-7B-Qwen2.5VL"
+        },
+        "ground_truth_answer": "Don’t need to worry, your child's brain is absolutely healthy. The provided MRI scan shows no obvious signs of a benign or malignant brain tumour.  The brain's structures appear to be symmetrical; there is no discernible mass effect, contrast enhancement, or irregular lesions, which are typically seen in tumours.",
+        "sample_id": 77,
+        "original_sample_fields": [
+          "Question",
+          "Answer",
+          "image"
+        ]
+      },
+      {
+        "question": "Hey Doctor! My wife was having severe headache, so that's we done MRI scan. Does she have any signs of brain tumor?",
+        "image_path": "temp_image.png",
+        "generated_answer": "I understand your concern regarding the MRI results. Based on this image alone, it is difficult to definitively diagnose or rule out a brain tumor without additional clinical information and further evaluation by a qualified medical professional. However, I can provide some general observations from what I see in this single slice.\n\nThe brain parenchyma appears relatively normal with no obvious large masses or lesions visible in this particular section. The ventricles and sulci appear within normal limits for this slice level. There does not seem to be significant midline shift or mass effect causing compression of adjacent structures at this level.\n\nHowever, please note that a single MRI slice provides",
+        "success": true,
+        "model_type": "qwen2.5vl",
+        "model_info": {
+          "model_type": "qwen2.5vl",
+          "model_path": "/root/HuatuoGPT-Vision/HuatuoGPT-Vision-7B-Qwen2.5VL"
+        },
+        "ground_truth_answer": "Yes, the MRI shows signs highly suspicious for brain tumors, with multiple lesions and surrounding swelling. Further tests and specialist consultation are needed for a definitive diagnosis and treatment plan. Please consult a neurologist or neuro-oncologist urgently.",
+        "sample_id": 78,
+        "original_sample_fields": [
+          "Question",
+          "Answer",
+          "image"
+        ]
+      },
+      {
+        "question": "Does the MRI show any areas of abnormal enhancement after contrast administration?",
+        "image_path": "temp_image.png",
+        "generated_answer": "No, there is no evidence of abnormal enhancement in this post-contrast T1-weighted image. The brain parenchyma appears homogeneous without focal lesions or irregularities that would suggest active inflammation or neoplastic processes. This uniformity supports the absence of significant pathological enhancements typically associated with conditions like meningitis or tumors.",
+        "success": true,
+        "model_type": "qwen2.5vl",
+        "model_info": {
+          "model_type": "qwen2.5vl",
+          "model_path": "/root/HuatuoGPT-Vision/HuatuoGPT-Vision-7B-Qwen2.5VL"
+        },
+        "ground_truth_answer": "The image does show a large area of abnormal high signal intensity in the right parietal lobe. This finding is highly suspicious for a brain tumor or other significant pathology. We cannot definitively determine if there are areas of abnormal enhancement after contrast administration.",
+        "sample_id": 79,
+        "original_sample_fields": [
+          "Question",
+          "Answer",
+          "image"
+        ]
+      },
+      {
+        "question": "Is there evidence of mass effect, such as compression of ventricles or midline shift?",
+        "image_path": "temp_image.png",
+        "generated_answer": "Yes, the image shows signs of mass effect with slight compression and displacement of adjacent brain structures, which is indicative of increased intracranial pressure due to the tumor's presence.",
+        "success": true,
+        "model_type": "qwen2.5vl",
+        "model_info": {
+          "model_type": "qwen2.5vl",
+          "model_path": "/root/HuatuoGPT-Vision/HuatuoGPT-Vision-7B-Qwen2.5VL"
+        },
+        "ground_truth_answer": "Yes, this T1-weighted post-contrast MRI image shows evidence of mass effect, which is often associated with a brain tumor. Compression of the left lateral ventricle: The lesion in the left occipital lobe is large and appears to be pushing on and compressing the posterior aspect of the left lateral ventricle, making it smaller than the right lateral ventricle.",
+        "sample_id": 80,
+        "original_sample_fields": [
+          "Question",
+          "Answer",
+          "image"
+        ]
+      },
+      {
+        "question": "Does the pattern of contrast enhancement suggest a high-grade tumor?",
+        "image_path": "temp_image.png",
+        "generated_answer": "The pattern and characteristics observed in this MRI scan do not strongly suggest a high-grade glioma, such as an astrocytoma or oligodendroglioma. The image shows a well-defined lesion with relatively homogeneous signal intensity on T2-weighted imaging (T2WI), which is more typical for lower-grade tumors like low-grade gliomas or metastatic lesions.\n\nHigh-grade gliomas often exhibit irregular borders, heterogeneous signal intensities, and areas of necrosis or cystic changes. While some high-grade tumors can present with contrast enhancement, the pattern seen here does not align closely with those typically associated with aggressive malignancies.\n\nIt",
+        "success": true,
+        "model_type": "qwen2.5vl",
+        "model_info": {
+          "model_type": "qwen2.5vl",
+          "model_path": "/root/HuatuoGPT-Vision/HuatuoGPT-Vision-7B-Qwen2.5VL"
+        },
+        "ground_truth_answer": "FLAIR images are sensitive to fluid and edema, and they highlight the area of abnormality in the right parietal lobe. This abnormality is suspicious for a brain tumor or other pathology.",
+        "sample_id": 81,
+        "original_sample_fields": [
+          "Question",
+          "Answer",
+          "image"
+        ]
+      },
+      {
+        "question": "Does the imaging suggest a lesion that is diffusely infiltrative rather than a well-defined mass?",
+        "image_path": "temp_image.png",
+        "generated_answer": "",
+        "success": true,
+        "model_type": "qwen2.5vl",
+        "model_info": {
+          "model_type": "qwen2.5vl",
+          "model_path": "/root/HuatuoGPT-Vision/HuatuoGPT-Vision-7B-Qwen2.5VL"
+        },
+        "ground_truth_answer": "Based on this axial T2-weighted MRI image, there are findings suggestive of a lesion that is more diffusely infiltrative rather than a well-defined mass, although there also appears to be a more substantial component. Therefore, the answer is yes, the imaging suggests a lesion that is diffusely infiltrative rather than solely a well-defined mass, although there might be areas of higher tumor density within this infiltrative process.",
+        "sample_id": 82,
+        "original_sample_fields": [
+          "Question",
+          "Answer",
+          "image"
+        ]
+      },
+      {
+        "question": "Are there multiple distinct areas of abnormal signal intensity visible in the brain?",
+        "image_path": "temp_image.png",
+        "generated_answer": "Yes, based on the information provided in the reference, there appear to be multiple distinct areas of abnormal signal intensity within the brain parenchyma that could represent metastatic lesions or other pathological changes. The MRI scan shows heterogeneous enhancement and irregular margins, which is consistent with the presence of multiple focal abnormalities throughout the brain tissue.",
+        "success": true,
+        "model_type": "qwen2.5vl",
+        "model_info": {
+          "model_type": "qwen2.5vl",
+          "model_path": "/root/HuatuoGPT-Vision/HuatuoGPT-Vision-7B-Qwen2.5VL"
+        },
+        "ground_truth_answer": "Yes, this T1-weighted post-contrast MRI image shows multiple distinct areas of abnormal signal intensity visible in the brain, which is a critical observation suggesting the presence of more than one intracranial lesion, highly suspicious for brain tumors. Further investigation is needed to determine the exact nature and origin of these lesions.",
+        "sample_id": 83,
+        "original_sample_fields": [
+          "Question",
+          "Answer",
+          "image"
+        ]
+      },
+      {
+        "question": "Is there evidence of a lesion arising from the meninges (the membranes surrounding the brain)?",
+        "image_path": "temp_image.png",
+        "generated_answer": "Yes, based on the information provided in the reference text, the MRI scan shows an enhancing mass lesion originating from the meninges, which is consistent with a meningioma.",
+        "success": true,
+        "model_type": "qwen2.5vl",
+        "model_info": {
+          "model_type": "qwen2.5vl",
+          "model_path": "/root/HuatuoGPT-Vision/HuatuoGPT-Vision-7B-Qwen2.5VL"
+        },
+        "ground_truth_answer": "The evidence is not strongly suggestive of a lesion arising primarily from the meninges, but dural involvement cannot be entirely ruled out without further imaging. The presence of a tumor within the brain parenchyma is evident.",
+        "sample_id": 84,
+        "original_sample_fields": [
+          "Question",
+          "Answer",
+          "image"
+        ]
+      },
+      {
+        "question": "Tell me the condition of the brain, is it healthy or showing tumor symptons?",
+        "image_path": "temp_image.png",
+        "generated_answer": "The image shows an abnormality in the right frontal lobe region of the brain that appears to be consistent with a tumor. The presence of this mass-like lesion suggests there may be some pathological changes occurring within the brain tissue in this area.\n\nWhile I cannot provide a definitive diagnosis based solely on this single MRI scan, the findings do indicate potential abnormalities that warrant further clinical evaluation and investigation by a qualified medical professional. Additional imaging studies, such as contrast-enhanced scans or follow-up MRIs, may be necessary to better characterize the nature and extent of any underlying pathology.\n\nIt's important to note that while tumors can present with various radiological features",
+        "success": true,
+        "model_type": "qwen2.5vl",
+        "model_info": {
+          "model_type": "qwen2.5vl",
+          "model_path": "/root/HuatuoGPT-Vision/HuatuoGPT-Vision-7B-Qwen2.5VL"
+        },
+        "ground_truth_answer": "This axial FLAIR MRI image shows findings that are not consistent with a healthy brain and are highly suggestive of a brain tumor or other significant pathology. Indicates the presence of abnormal tissue or fluid within the brain parenchyma and could represent the tumor itself, surrounding edema (swelling) caused by the tumor, or a combination of both.",
+        "sample_id": 85,
+        "original_sample_fields": [
+          "Question",
+          "Answer",
+          "image"
+        ]
+      },
+      {
+        "question": "Does the imaging show a lesion primarily located within the brain parenchyma?",
+        "image_path": "temp_image.png",
+        "generated_answer": "",
+        "success": true,
+        "model_type": "qwen2.5vl",
+        "model_info": {
+          "model_type": "qwen2.5vl",
+          "model_path": "/root/HuatuoGPT-Vision/HuatuoGPT-Vision-7B-Qwen2.5VL"
+        },
+        "ground_truth_answer": "Yes, this coronal T1-weighted post-contrast MRI image shows a lesion that appears to be primarily located within the brain parenchyma, which is highly suggestive of a brain tumor or another intra-axial pathological process.",
+        "sample_id": 86,
+        "original_sample_fields": [
+          "Question",
+          "Answer",
+          "image"
+        ]
+      },
+      {
+        "question": "After administering contrast, are there any areas of abnormal enhancement visible on the MRI?",
+        "image_path": "temp_image.png",
+        "generated_answer": " after administering contrast, there is no evidence of abnormal enhancement in this particular slice of the brain MRI scan. The image shows normal anatomical structures without signs of pathological lesions or abnormalities that would typically appear as enhanced regions following gadolinium administration.",
+        "success": true,
+        "model_type": "qwen2.5vl",
+        "model_info": {
+          "model_type": "qwen2.5vl",
+          "model_path": "/root/HuatuoGPT-Vision/HuatuoGPT-Vision-7B-Qwen2.5VL"
+        },
+        "ground_truth_answer": "Yes, this axial T1-weighted MRI image, obtained after the administration of contrast, clearly shows an area of abnormal enhancement in the left occipital lobe. The presence of this abnormal enhancement is a significant finding and is highly suggestive of a brain tumor or other pathology such as infection or inflammation.",
+        "sample_id": 87,
+        "original_sample_fields": [
+          "Question",
+          "Answer",
+          "image"
+        ]
+      },
+      {
+        "question": "Does the MRI show any areas of abnormal enhancement after contrast administration?",
+        "image_path": "temp_image.png",
+        "generated_answer": "No, there is no evidence of abnormal enhancement in this post-contrast T1-weighted MRI scan of the brain. The image appears to be normal without any signs of pathological changes or abnormalities.",
+        "success": true,
+        "model_type": "qwen2.5vl",
+        "model_info": {
+          "model_type": "qwen2.5vl",
+          "model_path": "/root/HuatuoGPT-Vision/HuatuoGPT-Vision-7B-Qwen2.5VL"
+        },
+        "ground_truth_answer": "The image does not show any clear, large, or obvious lesions that would typically exhibit significant contrast enhancement in the context of a brain tumor. So there no sign of the tumor.",
+        "sample_id": 88,
+        "original_sample_fields": [
+          "Question",
+          "Answer",
+          "image"
+        ]
+      },
+      {
+        "question": "Does the image show any signs of hemorrhage within a lesion?",
+        "image_path": "temp_image.png",
+        "generated_answer": "",
+        "success": true,
+        "model_type": "qwen2.5vl",
+        "model_info": {
+          "model_type": "qwen2.5vl",
+          "model_path": "/root/HuatuoGPT-Vision/HuatuoGPT-Vision-7B-Qwen2.5VL"
+        },
+        "ground_truth_answer": "Based on this axial FLAIR MRI image, there is no clear evidence of hemorrhage within any visible lesions. The answer is no, there is no clear evidence of Brain Tumor.",
+        "sample_id": 89,
+        "original_sample_fields": [
+          "Question",
+          "Answer",
+          "image"
+        ]
+      },
+      {
+        "question": "Does the MRI show any focal areas of abnormal signal intensity within the brain parenchyma?",
+        "image_path": "temp_image.png",
+        "generated_answer": "No, based on the information provided in the reference text and the image itself, there do not appear to be any focal areas of abnormal signal intensity visible within the brain parenchyma. The reference indicates that the T2-weighted axial images showed no focal lesions or abnormalities within the brain parenchyma.",
+        "success": true,
+        "model_type": "qwen2.5vl",
+        "model_info": {
+          "model_type": "qwen2.5vl",
+          "model_path": "/root/HuatuoGPT-Vision/HuatuoGPT-Vision-7B-Qwen2.5VL"
+        },
+        "ground_truth_answer": "Based on this axial T1-weighted MRI image, there are no clearly discernible focal areas of abnormal signal intensity within the brain parenchyma that are definitively suggestive of a tumor. There are no clearly visible focal areas of abnormal signal intensity within the brain parenchyma that strongly suggest a tumor.",
+        "sample_id": 90,
+        "original_sample_fields": [
+          "Question",
+          "Answer",
+          "image"
+        ]
+      },
+      {
+        "question": "Does the MRI show any signs of vasogenic edema (swelling in the white matter)?",
+        "image_path": "temp_image.png",
+        "generated_answer": "Yes, the MRI image shows areas of increased signal intensity within the white matter regions bilaterally, which is indicative of vasogenic edema or swelling due to disruption of the blood-brain barrier. This finding suggests an underlying pathological process affecting the brain's vascular integrity and potentially impacting cerebral function.",
+        "success": true,
+        "model_type": "qwen2.5vl",
+        "model_info": {
+          "model_type": "qwen2.5vl",
+          "model_path": "/root/HuatuoGPT-Vision/HuatuoGPT-Vision-7B-Qwen2.5VL"
+        },
+        "ground_truth_answer": "There is clear evidence of abnormal fluid in the white matter, it does not exhibit the typical pattern and distribution of vasogenic edema seen around a brain tumor. The findings are more suggestive of a diffuse white matter disease process. There are no clear signs directly pointing to a brain tumor in this specific image.",
+        "sample_id": 91,
+        "original_sample_fields": [
+          "Question",
+          "Answer",
+          "image"
+        ]
+      },
+      {
+        "question": "Does the MRI appear entirely normal with no focal abnormalities?",
+        "image_path": "temp_image.png",
+        "generated_answer": "No, the MRI does not show any focal abnormality or lesion within the brain tissue itself; however, there is an indication of diffuse cerebral atrophy characterized by widened sulci and enlarged ventricles which suggests generalized brain volume loss. This could be associated with various neurodegenerative conditions but typically indicates a chronic process rather than acute pathology. The absence of focal lesions in this scan helps differentiate from other types of brain pathologies such as tumors or abscesses that might present with localized swelling or mass effect.",
+        "success": true,
+        "model_type": "qwen2.5vl",
+        "model_info": {
+          "model_type": "qwen2.5vl",
+          "model_path": "/root/HuatuoGPT-Vision/HuatuoGPT-Vision-7B-Qwen2.5VL"
+        },
+        "ground_truth_answer": "Based on this single axial T1-weighted image, the answer is yes, the MRI appears entirely normal with no obvious focal abnormalities suggestive of a brain tumor.",
+        "sample_id": 92,
+        "original_sample_fields": [
+          "Question",
+          "Answer",
+          "image"
+        ]
+      },
+      {
+        "question": "Is there any midline shift of brain structures?",
+        "image_path": "temp_image.png",
+        "generated_answer": "No, the image does not show any significant midline shift or displacement of brain structures. The ventricles and other anatomical landmarks appear to be symmetrically aligned within their normal positions relative to each other.",
+        "success": true,
+        "model_type": "qwen2.5vl",
+        "model_info": {
+          "model_type": "qwen2.5vl",
+          "model_path": "/root/HuatuoGPT-Vision/HuatuoGPT-Vision-7B-Qwen2.5VL"
+        },
+        "ground_truth_answer": "Therefore, based on this single axial T2-weighted image, the answer is no, there is no clear evidence of a significant midline shift of brain structures.",
+        "sample_id": 93,
+        "original_sample_fields": [
+          "Question",
+          "Answer",
+          "image"
+        ]
+      },
+      {
+        "question": "I'm feeling very heavy today especially in my head. What are the results of my brain MRI scan?",
+        "image_path": "temp_image.png",
+        "generated_answer": "The MRI image shows that there is an abnormal area in your right frontal lobe, which appears brighter than usual on this type of scan. This could indicate swelling or inflammation around the lesion. The surrounding tissue also looks different from normal, suggesting some changes might be occurring due to the lesion's presence. It’s important for us to monitor these findings closely and discuss potential treatment options with you based on further evaluations and symptoms. Please let me know if you have any other questions about what we see here!",
+        "success": true,
+        "model_type": "qwen2.5vl",
+        "model_info": {
+          "model_type": "qwen2.5vl",
+          "model_path": "/root/HuatuoGPT-Vision/HuatuoGPT-Vision-7B-Qwen2.5VL"
+        },
+        "ground_truth_answer": "Based on this axial T2-weighted MRI image, there is a large area of abnormal high signal intensity in the right frontal lobe. This area is extensive and appears to involve both the white and gray matter. The size and appearance of this abnormality are significant and are highly suggestive of a serious underlying condition, with a brain tumor being a strong possibility.",
+        "sample_id": 94,
+        "original_sample_fields": [
+          "Question",
+          "Answer",
+          "image"
+        ]
+      },
+      {
+        "question": "My mom has been experiencing persistent dizziness and some blurry vision. Here's her brain MRI scan. What do the results indicate?",
+        "image_path": "temp_image.png",
+        "generated_answer": "The MRI scan shows an area of increased signal intensity in the right frontal lobe, which is consistent with a subacute infarct or ischemic stroke. This finding correlates with your mother's symptoms of persistent dizziness and blurred vision, as these neurological deficits can be caused by damage to specific regions of the brain responsible for balance and visual processing.\n\nBased on this information, it appears that your mother may have suffered from a recent ischemic event affecting the right frontoparietal region of her brain. The lack of significant mass effect suggests that there hasn't been extensive swelling or bleeding associated with the stroke at this stage.\n\nTo further evaluate",
+        "success": true,
+        "model_type": "qwen2.5vl",
+        "model_info": {
+          "model_type": "qwen2.5vl",
+          "model_path": "/root/HuatuoGPT-Vision/HuatuoGPT-Vision-7B-Qwen2.5VL"
+        },
+        "ground_truth_answer": "Based on this axial T2-weighted MRI image of your mom's brain, there is a large area of abnormal high signal intensity in the right frontal lobe. This area is quite extensive and appears to involve both the white and gray matter. The presence of this large abnormality is significant and requires urgent attention. It is highly suggestive of a serious underlying condition, with a brain tumor being a major concern given the symptoms and the imaging findings.",
+        "sample_id": 95,
+        "original_sample_fields": [
+          "Question",
+          "Answer",
+          "image"
+        ]
+      },
+      {
+        "question": "My colleague has been complaining of persistent nausea and vomiting. They had a brain MRI done. What might be causing these symptoms based on this scan?",
+        "image_path": "temp_image.png",
+        "generated_answer": "Based on the provided MRI image, there appears to be an abnormality in the left temporal lobe region of the brain. This could potentially explain your colleague's persistent nausea and vomiting symptoms.\n\nThe presence of a lesion or mass-like structure within the left temporal lobe may indicate a pathological process such as a tumor, infection, inflammation, or other neurological condition affecting that area of the brain. The surrounding edema (swelling) further suggests an active inflammatory or neoplastic process.\n\nIt is important to note that while imaging findings can provide valuable information, they should not be interpreted without considering the clinical presentation and additional diagnostic tests. Further evaluation",
+        "success": true,
+        "model_type": "qwen2.5vl",
+        "model_info": {
+          "model_type": "qwen2.5vl",
+          "model_path": "/root/HuatuoGPT-Vision/HuatuoGPT-Vision-7B-Qwen2.5VL"
+        },
+        "ground_truth_answer": "There is a prominent area of abnormal high signal intensity in the posterior fossa, specifically involving the cerebellum, predominantly on the left side. There also appears to be some extension into the brainstem region. There is a presence of tumor and please advise your colleague to consult with their referring physician or a neurologist immediately to discuss these MRI findings.",
+        "sample_id": 96,
+        "original_sample_fields": [
+          "Question",
+          "Answer",
+          "image"
+        ]
+      },
+      {
+        "question": "My close friend had a sudden onset of speech difficulties. This is their brain MRI. Can you interpret the findings?",
+        "image_path": "temp_image.png",
+        "generated_answer": "The MRI scan shows significant abnormalities in both cerebral hemispheres, particularly affecting areas associated with language and motor functions. The hyperintense regions on T2-weighted imaging suggest acute infarcts or ischemic strokes, which could explain your friend's sudden speech difficulties. These lesions likely involve critical areas such as Broca’s area (responsible for speech production) and Wernicke’s area (involved in understanding spoken words). Immediate medical attention is crucial to manage these conditions effectively and prevent further complications.",
+        "success": true,
+        "model_type": "qwen2.5vl",
+        "model_info": {
+          "model_type": "qwen2.5vl",
+          "model_path": "/root/HuatuoGPT-Vision/HuatuoGPT-Vision-7B-Qwen2.5VL"
+        },
+        "ground_truth_answer": "Based on this axial T2-weighted MRI image of your close friend's brain, there is a significant area of abnormal high signal intensity in the left temporal lobe. This area is quite large and appears to involve the brain parenchyma. Please strongly advise your friend to consult with their referring physician or a neurologist immediately to discuss these MRI findings. While a brain tumor is a possibility, other conditions like stroke also need to be ruled out urgently.",
+        "sample_id": 97,
+        "original_sample_fields": [
+          "Question",
+          "Answer",
+          "image"
+        ]
+      },
+      {
+        "question": "My grandfather fell and hit his head a few weeks ago, and he's had persistent headaches since. Here's his brain MRI. What does it show?",
+        "image_path": "temp_image.png",
+        "generated_answer": "The MRI scan shows an area of abnormality in the right frontal lobe of your grandfather's brain. This region appears brighter than normal on this type of image, which is often indicative of a lesion or tumor. The surrounding tissue also looks different from what we would expect to see normally, suggesting some swelling or changes around the lesion. It’s important for us to discuss these findings further with your doctor who can provide more detailed information about potential causes and next steps for treatment.",
+        "success": true,
+        "model_type": "qwen2.5vl",
+        "model_info": {
+          "model_type": "qwen2.5vl",
+          "model_path": "/root/HuatuoGPT-Vision/HuatuoGPT-Vision-7B-Qwen2.5VL"
+        },
+        "ground_truth_answer": "Based on this axial T1-weighted post-contrast MRI image of your grandfather's brain, there is a well-defined, lobulated lesion in the right parietal-occipital region. This lesion demonstrates significant enhancement after contrast administration. The location and appearance of this lesion, particularly the contrast enhancement, are highly suggestive of an intracranial mass, most likely a brain tumor.",
+        "sample_id": 98,
+        "original_sample_fields": [
+          "Question",
+          "Answer",
+          "image"
+        ]
+      },
+      {
+        "question": "Does the pattern of contrast enhancement suggest a high-grade tumor?",
+        "image_path": "temp_image.png",
+        "generated_answer": "Yes, the pattern and extent of the contrast enhancement in this MRI scan strongly indicate that it is consistent with a high-grade glioma, such as an astrocytoma grade III or IV. The irregularity and intense enhancement typically signify aggressive tumor behavior and rapid growth, which are hallmarks of higher-grade tumors. This type of imaging finding necessitates urgent clinical evaluation to determine appropriate management strategies including potential surgical intervention followed by adjuvant therapies like radiation therapy and chemotherapy depending on further diagnostic assessments.",
+        "success": true,
+        "model_type": "qwen2.5vl",
+        "model_info": {
+          "model_type": "qwen2.5vl",
+          "model_path": "/root/HuatuoGPT-Vision/HuatuoGPT-Vision-7B-Qwen2.5VL"
+        },
+        "ground_truth_answer": "Therefore, while this T2 image strongly suggests the presence of a brain tumor, we need to see the post-contrast T1-weighted images to determine if the pattern of enhancement is suggestive of a high-grade tumor.",
+        "sample_id": 99,
+        "original_sample_fields": [
+          "Question",
+          "Answer",
+          "image"
+        ]
+      },
+      {
+        "question": "My child has been having unexplained balance issues. We got a brain MRI. What do the results suggest?",
+        "image_path": "temp_image.png",
+        "generated_answer": "The MRI scan shows an abnormality in the left frontal lobe of your child's brain, which is consistent with a diagnosis of cortical dysplasia. This condition involves abnormal development and organization of neurons in that part of the brain. The irregularities seen on the MRI can affect various functions controlled by this area, including motor skills like balance.\n\nCortical dysplasia can lead to difficulties with coordination, balance, and other neurological symptoms depending on its severity and exact location within the brain. It's important to discuss these findings further with your pediatric neurologist or specialist who will be able to provide more detailed information about potential treatment options",
+        "success": true,
+        "model_type": "qwen2.5vl",
+        "model_info": {
+          "model_type": "qwen2.5vl",
+          "model_path": "/root/HuatuoGPT-Vision/HuatuoGPT-Vision-7B-Qwen2.5VL"
+        },
+        "ground_truth_answer": "Based on this axial T2-weighted MRI image of your child's brain, there is a significant area of abnormal high signal intensity in the right frontal lobe. This area is quite large and extends towards the midline, potentially involving the corpus callosum. There also appears to be some surrounding high signal intensity, possibly representing edema (swelling). Need to take immediate medical treatment because the size of tumor is quite large.",
+        "sample_id": 100,
+        "original_sample_fields": [
+          "Question",
+          "Answer",
+          "image"
+        ]
+      }
+    ],
+    "summary": {
+      "total_samples": 101,
+      "successful_samples": 101
+    }
+  }
